@@ -1,0 +1,7 @@
+sample_index=0
+label=7
+acc_shift=11
+accumulators=-155225 -356113 -164394 -156549 -251089 -184908 -321645 208491 -172447 -169095
+plan_inputs=-76 -174 -81 -77 -123 -91 -158 101 -85 -83
+activations=3 0 3 3 2 3 1 30 3 3
+prediction=7
