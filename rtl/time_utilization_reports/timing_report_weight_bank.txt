@@ -1,0 +1,1140 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Sep 10 21:37:25 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -quiet -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_weight_bank.txt
+| Design       : weight_bank
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (20)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (290)
+5. checking no_input_delay (110)
+6. checking no_output_delay (80)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (20)
+-------------------------
+ There are 20 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+mem0/memory_reg/CLKARDCLK
+mem0/memory_reg/CLKBWRCLK
+mem1/memory_reg/CLKARDCLK
+mem1/memory_reg/CLKBWRCLK
+mem2/memory_reg/CLKARDCLK
+mem2/memory_reg/CLKBWRCLK
+mem3/memory_reg/CLKARDCLK
+mem3/memory_reg/CLKBWRCLK
+mem4/memory_reg/CLKARDCLK
+mem4/memory_reg/CLKBWRCLK
+mem5/memory_reg/CLKARDCLK
+mem5/memory_reg/CLKBWRCLK
+mem6/memory_reg/CLKARDCLK
+mem6/memory_reg/CLKBWRCLK
+mem7/memory_reg/CLKARDCLK
+mem7/memory_reg/CLKBWRCLK
+mem8/memory_reg/CLKARDCLK
+mem8/memory_reg/CLKBWRCLK
+mem9/memory_reg/CLKARDCLK
+mem9/memory_reg/CLKBWRCLK
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (290)
+--------------------------------------------------
+ There are 290 pins that are not constrained for maximum delay. (HIGH)
+
+mem0/memory_reg/ADDRARDADDR[10]
+mem0/memory_reg/ADDRARDADDR[11]
+mem0/memory_reg/ADDRARDADDR[12]
+mem0/memory_reg/ADDRARDADDR[13]
+mem0/memory_reg/ADDRARDADDR[4]
+mem0/memory_reg/ADDRARDADDR[5]
+mem0/memory_reg/ADDRARDADDR[6]
+mem0/memory_reg/ADDRARDADDR[7]
+mem0/memory_reg/ADDRARDADDR[8]
+mem0/memory_reg/ADDRARDADDR[9]
+mem0/memory_reg/ADDRBWRADDR[10]
+mem0/memory_reg/ADDRBWRADDR[11]
+mem0/memory_reg/ADDRBWRADDR[12]
+mem0/memory_reg/ADDRBWRADDR[13]
+mem0/memory_reg/ADDRBWRADDR[4]
+mem0/memory_reg/ADDRBWRADDR[5]
+mem0/memory_reg/ADDRBWRADDR[6]
+mem0/memory_reg/ADDRBWRADDR[7]
+mem0/memory_reg/ADDRBWRADDR[8]
+mem0/memory_reg/ADDRBWRADDR[9]
+mem0/memory_reg/DIADI[0]
+mem0/memory_reg/DIADI[1]
+mem0/memory_reg/DIADI[2]
+mem0/memory_reg/DIADI[3]
+mem0/memory_reg/DIADI[4]
+mem0/memory_reg/DIADI[5]
+mem0/memory_reg/DIADI[6]
+mem0/memory_reg/DIADI[7]
+mem0/memory_reg/ENARDEN
+mem1/memory_reg/ADDRARDADDR[10]
+mem1/memory_reg/ADDRARDADDR[11]
+mem1/memory_reg/ADDRARDADDR[12]
+mem1/memory_reg/ADDRARDADDR[13]
+mem1/memory_reg/ADDRARDADDR[4]
+mem1/memory_reg/ADDRARDADDR[5]
+mem1/memory_reg/ADDRARDADDR[6]
+mem1/memory_reg/ADDRARDADDR[7]
+mem1/memory_reg/ADDRARDADDR[8]
+mem1/memory_reg/ADDRARDADDR[9]
+mem1/memory_reg/ADDRBWRADDR[10]
+mem1/memory_reg/ADDRBWRADDR[11]
+mem1/memory_reg/ADDRBWRADDR[12]
+mem1/memory_reg/ADDRBWRADDR[13]
+mem1/memory_reg/ADDRBWRADDR[4]
+mem1/memory_reg/ADDRBWRADDR[5]
+mem1/memory_reg/ADDRBWRADDR[6]
+mem1/memory_reg/ADDRBWRADDR[7]
+mem1/memory_reg/ADDRBWRADDR[8]
+mem1/memory_reg/ADDRBWRADDR[9]
+mem1/memory_reg/DIADI[0]
+mem1/memory_reg/DIADI[1]
+mem1/memory_reg/DIADI[2]
+mem1/memory_reg/DIADI[3]
+mem1/memory_reg/DIADI[4]
+mem1/memory_reg/DIADI[5]
+mem1/memory_reg/DIADI[6]
+mem1/memory_reg/DIADI[7]
+mem1/memory_reg/ENARDEN
+mem2/memory_reg/ADDRARDADDR[10]
+mem2/memory_reg/ADDRARDADDR[11]
+mem2/memory_reg/ADDRARDADDR[12]
+mem2/memory_reg/ADDRARDADDR[13]
+mem2/memory_reg/ADDRARDADDR[4]
+mem2/memory_reg/ADDRARDADDR[5]
+mem2/memory_reg/ADDRARDADDR[6]
+mem2/memory_reg/ADDRARDADDR[7]
+mem2/memory_reg/ADDRARDADDR[8]
+mem2/memory_reg/ADDRARDADDR[9]
+mem2/memory_reg/ADDRBWRADDR[10]
+mem2/memory_reg/ADDRBWRADDR[11]
+mem2/memory_reg/ADDRBWRADDR[12]
+mem2/memory_reg/ADDRBWRADDR[13]
+mem2/memory_reg/ADDRBWRADDR[4]
+mem2/memory_reg/ADDRBWRADDR[5]
+mem2/memory_reg/ADDRBWRADDR[6]
+mem2/memory_reg/ADDRBWRADDR[7]
+mem2/memory_reg/ADDRBWRADDR[8]
+mem2/memory_reg/ADDRBWRADDR[9]
+mem2/memory_reg/DIADI[0]
+mem2/memory_reg/DIADI[1]
+mem2/memory_reg/DIADI[2]
+mem2/memory_reg/DIADI[3]
+mem2/memory_reg/DIADI[4]
+mem2/memory_reg/DIADI[5]
+mem2/memory_reg/DIADI[6]
+mem2/memory_reg/DIADI[7]
+mem2/memory_reg/ENARDEN
+mem3/memory_reg/ADDRARDADDR[10]
+mem3/memory_reg/ADDRARDADDR[11]
+mem3/memory_reg/ADDRARDADDR[12]
+mem3/memory_reg/ADDRARDADDR[13]
+mem3/memory_reg/ADDRARDADDR[4]
+mem3/memory_reg/ADDRARDADDR[5]
+mem3/memory_reg/ADDRARDADDR[6]
+mem3/memory_reg/ADDRARDADDR[7]
+mem3/memory_reg/ADDRARDADDR[8]
+mem3/memory_reg/ADDRARDADDR[9]
+mem3/memory_reg/ADDRBWRADDR[10]
+mem3/memory_reg/ADDRBWRADDR[11]
+mem3/memory_reg/ADDRBWRADDR[12]
+mem3/memory_reg/ADDRBWRADDR[13]
+mem3/memory_reg/ADDRBWRADDR[4]
+mem3/memory_reg/ADDRBWRADDR[5]
+mem3/memory_reg/ADDRBWRADDR[6]
+mem3/memory_reg/ADDRBWRADDR[7]
+mem3/memory_reg/ADDRBWRADDR[8]
+mem3/memory_reg/ADDRBWRADDR[9]
+mem3/memory_reg/DIADI[0]
+mem3/memory_reg/DIADI[1]
+mem3/memory_reg/DIADI[2]
+mem3/memory_reg/DIADI[3]
+mem3/memory_reg/DIADI[4]
+mem3/memory_reg/DIADI[5]
+mem3/memory_reg/DIADI[6]
+mem3/memory_reg/DIADI[7]
+mem3/memory_reg/ENARDEN
+mem4/memory_reg/ADDRARDADDR[10]
+mem4/memory_reg/ADDRARDADDR[11]
+mem4/memory_reg/ADDRARDADDR[12]
+mem4/memory_reg/ADDRARDADDR[13]
+mem4/memory_reg/ADDRARDADDR[4]
+mem4/memory_reg/ADDRARDADDR[5]
+mem4/memory_reg/ADDRARDADDR[6]
+mem4/memory_reg/ADDRARDADDR[7]
+mem4/memory_reg/ADDRARDADDR[8]
+mem4/memory_reg/ADDRARDADDR[9]
+mem4/memory_reg/ADDRBWRADDR[10]
+mem4/memory_reg/ADDRBWRADDR[11]
+mem4/memory_reg/ADDRBWRADDR[12]
+mem4/memory_reg/ADDRBWRADDR[13]
+mem4/memory_reg/ADDRBWRADDR[4]
+mem4/memory_reg/ADDRBWRADDR[5]
+mem4/memory_reg/ADDRBWRADDR[6]
+mem4/memory_reg/ADDRBWRADDR[7]
+mem4/memory_reg/ADDRBWRADDR[8]
+mem4/memory_reg/ADDRBWRADDR[9]
+mem4/memory_reg/DIADI[0]
+mem4/memory_reg/DIADI[1]
+mem4/memory_reg/DIADI[2]
+mem4/memory_reg/DIADI[3]
+mem4/memory_reg/DIADI[4]
+mem4/memory_reg/DIADI[5]
+mem4/memory_reg/DIADI[6]
+mem4/memory_reg/DIADI[7]
+mem4/memory_reg/ENARDEN
+mem5/memory_reg/ADDRARDADDR[10]
+mem5/memory_reg/ADDRARDADDR[11]
+mem5/memory_reg/ADDRARDADDR[12]
+mem5/memory_reg/ADDRARDADDR[13]
+mem5/memory_reg/ADDRARDADDR[4]
+mem5/memory_reg/ADDRARDADDR[5]
+mem5/memory_reg/ADDRARDADDR[6]
+mem5/memory_reg/ADDRARDADDR[7]
+mem5/memory_reg/ADDRARDADDR[8]
+mem5/memory_reg/ADDRARDADDR[9]
+mem5/memory_reg/ADDRBWRADDR[10]
+mem5/memory_reg/ADDRBWRADDR[11]
+mem5/memory_reg/ADDRBWRADDR[12]
+mem5/memory_reg/ADDRBWRADDR[13]
+mem5/memory_reg/ADDRBWRADDR[4]
+mem5/memory_reg/ADDRBWRADDR[5]
+mem5/memory_reg/ADDRBWRADDR[6]
+mem5/memory_reg/ADDRBWRADDR[7]
+mem5/memory_reg/ADDRBWRADDR[8]
+mem5/memory_reg/ADDRBWRADDR[9]
+mem5/memory_reg/DIADI[0]
+mem5/memory_reg/DIADI[1]
+mem5/memory_reg/DIADI[2]
+mem5/memory_reg/DIADI[3]
+mem5/memory_reg/DIADI[4]
+mem5/memory_reg/DIADI[5]
+mem5/memory_reg/DIADI[6]
+mem5/memory_reg/DIADI[7]
+mem5/memory_reg/ENARDEN
+mem6/memory_reg/ADDRARDADDR[10]
+mem6/memory_reg/ADDRARDADDR[11]
+mem6/memory_reg/ADDRARDADDR[12]
+mem6/memory_reg/ADDRARDADDR[13]
+mem6/memory_reg/ADDRARDADDR[4]
+mem6/memory_reg/ADDRARDADDR[5]
+mem6/memory_reg/ADDRARDADDR[6]
+mem6/memory_reg/ADDRARDADDR[7]
+mem6/memory_reg/ADDRARDADDR[8]
+mem6/memory_reg/ADDRARDADDR[9]
+mem6/memory_reg/ADDRBWRADDR[10]
+mem6/memory_reg/ADDRBWRADDR[11]
+mem6/memory_reg/ADDRBWRADDR[12]
+mem6/memory_reg/ADDRBWRADDR[13]
+mem6/memory_reg/ADDRBWRADDR[4]
+mem6/memory_reg/ADDRBWRADDR[5]
+mem6/memory_reg/ADDRBWRADDR[6]
+mem6/memory_reg/ADDRBWRADDR[7]
+mem6/memory_reg/ADDRBWRADDR[8]
+mem6/memory_reg/ADDRBWRADDR[9]
+mem6/memory_reg/DIADI[0]
+mem6/memory_reg/DIADI[1]
+mem6/memory_reg/DIADI[2]
+mem6/memory_reg/DIADI[3]
+mem6/memory_reg/DIADI[4]
+mem6/memory_reg/DIADI[5]
+mem6/memory_reg/DIADI[6]
+mem6/memory_reg/DIADI[7]
+mem6/memory_reg/ENARDEN
+mem7/memory_reg/ADDRARDADDR[10]
+mem7/memory_reg/ADDRARDADDR[11]
+mem7/memory_reg/ADDRARDADDR[12]
+mem7/memory_reg/ADDRARDADDR[13]
+mem7/memory_reg/ADDRARDADDR[4]
+mem7/memory_reg/ADDRARDADDR[5]
+mem7/memory_reg/ADDRARDADDR[6]
+mem7/memory_reg/ADDRARDADDR[7]
+mem7/memory_reg/ADDRARDADDR[8]
+mem7/memory_reg/ADDRARDADDR[9]
+mem7/memory_reg/ADDRBWRADDR[10]
+mem7/memory_reg/ADDRBWRADDR[11]
+mem7/memory_reg/ADDRBWRADDR[12]
+mem7/memory_reg/ADDRBWRADDR[13]
+mem7/memory_reg/ADDRBWRADDR[4]
+mem7/memory_reg/ADDRBWRADDR[5]
+mem7/memory_reg/ADDRBWRADDR[6]
+mem7/memory_reg/ADDRBWRADDR[7]
+mem7/memory_reg/ADDRBWRADDR[8]
+mem7/memory_reg/ADDRBWRADDR[9]
+mem7/memory_reg/DIADI[0]
+mem7/memory_reg/DIADI[1]
+mem7/memory_reg/DIADI[2]
+mem7/memory_reg/DIADI[3]
+mem7/memory_reg/DIADI[4]
+mem7/memory_reg/DIADI[5]
+mem7/memory_reg/DIADI[6]
+mem7/memory_reg/DIADI[7]
+mem7/memory_reg/ENARDEN
+mem8/memory_reg/ADDRARDADDR[10]
+mem8/memory_reg/ADDRARDADDR[11]
+mem8/memory_reg/ADDRARDADDR[12]
+mem8/memory_reg/ADDRARDADDR[13]
+mem8/memory_reg/ADDRARDADDR[4]
+mem8/memory_reg/ADDRARDADDR[5]
+mem8/memory_reg/ADDRARDADDR[6]
+mem8/memory_reg/ADDRARDADDR[7]
+mem8/memory_reg/ADDRARDADDR[8]
+mem8/memory_reg/ADDRARDADDR[9]
+mem8/memory_reg/ADDRBWRADDR[10]
+mem8/memory_reg/ADDRBWRADDR[11]
+mem8/memory_reg/ADDRBWRADDR[12]
+mem8/memory_reg/ADDRBWRADDR[13]
+mem8/memory_reg/ADDRBWRADDR[4]
+mem8/memory_reg/ADDRBWRADDR[5]
+mem8/memory_reg/ADDRBWRADDR[6]
+mem8/memory_reg/ADDRBWRADDR[7]
+mem8/memory_reg/ADDRBWRADDR[8]
+mem8/memory_reg/ADDRBWRADDR[9]
+mem8/memory_reg/DIADI[0]
+mem8/memory_reg/DIADI[1]
+mem8/memory_reg/DIADI[2]
+mem8/memory_reg/DIADI[3]
+mem8/memory_reg/DIADI[4]
+mem8/memory_reg/DIADI[5]
+mem8/memory_reg/DIADI[6]
+mem8/memory_reg/DIADI[7]
+mem8/memory_reg/ENARDEN
+mem9/memory_reg/ADDRARDADDR[10]
+mem9/memory_reg/ADDRARDADDR[11]
+mem9/memory_reg/ADDRARDADDR[12]
+mem9/memory_reg/ADDRARDADDR[13]
+mem9/memory_reg/ADDRARDADDR[4]
+mem9/memory_reg/ADDRARDADDR[5]
+mem9/memory_reg/ADDRARDADDR[6]
+mem9/memory_reg/ADDRARDADDR[7]
+mem9/memory_reg/ADDRARDADDR[8]
+mem9/memory_reg/ADDRARDADDR[9]
+mem9/memory_reg/ADDRBWRADDR[10]
+mem9/memory_reg/ADDRBWRADDR[11]
+mem9/memory_reg/ADDRBWRADDR[12]
+mem9/memory_reg/ADDRBWRADDR[13]
+mem9/memory_reg/ADDRBWRADDR[4]
+mem9/memory_reg/ADDRBWRADDR[5]
+mem9/memory_reg/ADDRBWRADDR[6]
+mem9/memory_reg/ADDRBWRADDR[7]
+mem9/memory_reg/ADDRBWRADDR[8]
+mem9/memory_reg/ADDRBWRADDR[9]
+mem9/memory_reg/DIADI[0]
+mem9/memory_reg/DIADI[1]
+mem9/memory_reg/DIADI[2]
+mem9/memory_reg/DIADI[3]
+mem9/memory_reg/DIADI[4]
+mem9/memory_reg/DIADI[5]
+mem9/memory_reg/DIADI[6]
+mem9/memory_reg/DIADI[7]
+mem9/memory_reg/ENARDEN
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (110)
+--------------------------------
+ There are 110 input ports with no input delay specified. (HIGH)
+
+read_address[0]
+read_address[1]
+read_address[2]
+read_address[3]
+read_address[4]
+read_address[5]
+read_address[6]
+read_address[7]
+read_address[8]
+read_address[9]
+weight_in0[0]
+weight_in0[1]
+weight_in0[2]
+weight_in0[3]
+weight_in0[4]
+weight_in0[5]
+weight_in0[6]
+weight_in0[7]
+weight_in1[0]
+weight_in1[1]
+weight_in1[2]
+weight_in1[3]
+weight_in1[4]
+weight_in1[5]
+weight_in1[6]
+weight_in1[7]
+weight_in2[0]
+weight_in2[1]
+weight_in2[2]
+weight_in2[3]
+weight_in2[4]
+weight_in2[5]
+weight_in2[6]
+weight_in2[7]
+weight_in3[0]
+weight_in3[1]
+weight_in3[2]
+weight_in3[3]
+weight_in3[4]
+weight_in3[5]
+weight_in3[6]
+weight_in3[7]
+weight_in4[0]
+weight_in4[1]
+weight_in4[2]
+weight_in4[3]
+weight_in4[4]
+weight_in4[5]
+weight_in4[6]
+weight_in4[7]
+weight_in5[0]
+weight_in5[1]
+weight_in5[2]
+weight_in5[3]
+weight_in5[4]
+weight_in5[5]
+weight_in5[6]
+weight_in5[7]
+weight_in6[0]
+weight_in6[1]
+weight_in6[2]
+weight_in6[3]
+weight_in6[4]
+weight_in6[5]
+weight_in6[6]
+weight_in6[7]
+weight_in7[0]
+weight_in7[1]
+weight_in7[2]
+weight_in7[3]
+weight_in7[4]
+weight_in7[5]
+weight_in7[6]
+weight_in7[7]
+weight_in8[0]
+weight_in8[1]
+weight_in8[2]
+weight_in8[3]
+weight_in8[4]
+weight_in8[5]
+weight_in8[6]
+weight_in8[7]
+weight_in9[0]
+weight_in9[1]
+weight_in9[2]
+weight_in9[3]
+weight_in9[4]
+weight_in9[5]
+weight_in9[6]
+weight_in9[7]
+write_address[0]
+write_address[1]
+write_address[2]
+write_address[3]
+write_address[4]
+write_address[5]
+write_address[6]
+write_address[7]
+write_address[8]
+write_address[9]
+write_enable0
+write_enable1
+write_enable2
+write_enable3
+write_enable4
+write_enable5
+write_enable6
+write_enable7
+write_enable8
+write_enable9
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (80)
+--------------------------------
+ There are 80 ports with no output delay specified. (HIGH)
+
+weight0[0]
+weight0[1]
+weight0[2]
+weight0[3]
+weight0[4]
+weight0[5]
+weight0[6]
+weight0[7]
+weight1[0]
+weight1[1]
+weight1[2]
+weight1[3]
+weight1[4]
+weight1[5]
+weight1[6]
+weight1[7]
+weight2[0]
+weight2[1]
+weight2[2]
+weight2[3]
+weight2[4]
+weight2[5]
+weight2[6]
+weight2[7]
+weight3[0]
+weight3[1]
+weight3[2]
+weight3[3]
+weight3[4]
+weight3[5]
+weight3[6]
+weight3[7]
+weight4[0]
+weight4[1]
+weight4[2]
+weight4[3]
+weight4[4]
+weight4[5]
+weight4[6]
+weight4[7]
+weight5[0]
+weight5[1]
+weight5[2]
+weight5[3]
+weight5[4]
+weight5[5]
+weight5[6]
+weight5[7]
+weight6[0]
+weight6[1]
+weight6[2]
+weight6[3]
+weight6[4]
+weight6[5]
+weight6[6]
+weight6[7]
+weight7[0]
+weight7[1]
+weight7[2]
+weight7[3]
+weight7[4]
+weight7[5]
+weight7[6]
+weight7[7]
+weight8[0]
+weight8[1]
+weight8[2]
+weight8[3]
+weight8[4]
+weight8[5]
+weight8[6]
+weight8[7]
+weight9[0]
+weight9[1]
+weight9[2]
+weight9[3]
+weight9[4]
+weight9[5]
+weight9[6]
+weight9[7]
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  370          inf        0.000                      0                  370           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           370 Endpoints
+Min Delay           370 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[0])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[0]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[0]
+                                                                      r  weight0_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[0]
+                                                                      r  weight0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[1])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[1]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[1]
+                                                                      r  weight0_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[1]
+                                                                      r  weight0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[2])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[2]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[2]
+                                                                      r  weight0_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[2]
+                                                                      r  weight0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[3])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[3]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[3]
+                                                                      r  weight0_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[3]
+                                                                      r  weight0[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[4]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[4]
+                                                                      r  weight0_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[4]
+                                                                      r  weight0[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[5])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[5]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[5]
+                                                                      r  weight0_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[5]
+                                                                      r  weight0[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[6])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[6]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[6]
+                                                                      r  weight0_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[6]
+                                                                      r  weight0[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem0/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight0[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem0/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[7])
+                                                      2.454     2.454 r  mem0/memory_reg/DOBDO[7]
+                         net (fo=1, unplaced)         0.800     3.254    weight0_OBUF[7]
+                                                                      r  weight0_OBUF[7]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight0_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     5.888    weight0[7]
+                                                                      r  weight0[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem1/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem1/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[0])
+                                                      2.454     2.454 r  mem1/memory_reg/DOBDO[0]
+                         net (fo=1, unplaced)         0.800     3.254    weight1_OBUF[0]
+                                                                      r  weight1_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     5.888    weight1[0]
+                                                                      r  weight1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mem1/memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            weight1[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.888ns  (logic 5.088ns (86.418%)  route 0.800ns (13.582%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  mem1/memory_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[1])
+                                                      2.454     2.454 r  mem1/memory_reg/DOBDO[1]
+                         net (fo=1, unplaced)         0.800     3.254    weight1_OBUF[1]
+                                                                      r  weight1_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     5.888 r  weight1_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     5.888    weight1[1]
+                                                                      r  weight1[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 write_address[6]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[10]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[6] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[6]
+                                                                      r  write_address_IBUF[6]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[6]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[6]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[7]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[11]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[7] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[7]
+                                                                      r  write_address_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[7]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[7]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[8]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[12]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[8] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[8]
+                                                                      r  write_address_IBUF[8]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[8]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[8]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[9]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[13]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[9] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[9]
+                                                                      r  write_address_IBUF[9]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[9]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[9]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[0]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[4]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[0] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[0]
+                                                                      r  write_address_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[0]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[0]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[1]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[5]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[1] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[1]
+                                                                      r  write_address_IBUF[1]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[1]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[1]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[2]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[6]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[2] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[2]
+                                                                      r  write_address_IBUF[2]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[2]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[2]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[3]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[7]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[3] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[3]
+                                                                      r  write_address_IBUF[3]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[3]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[3]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[4]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[8]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[4] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[4]
+                                                                      r  write_address_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[4]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[4]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_address[5]
+                            (input port)
+  Destination:            mem0/memory_reg/ADDRARDADDR[9]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.200ns (37.290%)  route 0.337ns (62.710%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  write_address[5] (IN)
+                         net (fo=0)                   0.000     0.000    write_address[5]
+                                                                      r  write_address_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  write_address_IBUF[5]_inst/O
+                         net (fo=10, unplaced)        0.337     0.538    mem0/ADDRARDADDR[5]
+                         RAMB18E1                                     r  mem0/memory_reg/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

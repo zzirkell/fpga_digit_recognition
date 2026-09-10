@@ -1,0 +1,1317 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Sep 10 21:01:11 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_ten.txt
+| Design       : neuron_mac
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (32)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (96)
+5. checking no_input_delay (19)
+6. checking no_output_delay (32)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (32)
+-------------------------
+ There are 32 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+accumulator_reg[0]/C
+accumulator_reg[10]/C
+accumulator_reg[11]/C
+accumulator_reg[12]/C
+accumulator_reg[13]/C
+accumulator_reg[14]/C
+accumulator_reg[15]/C
+accumulator_reg[16]/C
+accumulator_reg[17]/C
+accumulator_reg[18]/C
+accumulator_reg[19]/C
+accumulator_reg[1]/C
+accumulator_reg[20]/C
+accumulator_reg[21]/C
+accumulator_reg[22]/C
+accumulator_reg[23]/C
+accumulator_reg[24]/C
+accumulator_reg[25]/C
+accumulator_reg[26]/C
+accumulator_reg[27]/C
+accumulator_reg[28]/C
+accumulator_reg[29]/C
+accumulator_reg[2]/C
+accumulator_reg[30]/C
+accumulator_reg[31]/C
+accumulator_reg[3]/C
+accumulator_reg[4]/C
+accumulator_reg[5]/C
+accumulator_reg[6]/C
+accumulator_reg[7]/C
+accumulator_reg[8]/C
+accumulator_reg[9]/C
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (96)
+-------------------------------------------------
+ There are 96 pins that are not constrained for maximum delay. (HIGH)
+
+accumulator_reg[0]/CE
+accumulator_reg[0]/CLR
+accumulator_reg[0]/D
+accumulator_reg[10]/CE
+accumulator_reg[10]/CLR
+accumulator_reg[10]/D
+accumulator_reg[11]/CE
+accumulator_reg[11]/CLR
+accumulator_reg[11]/D
+accumulator_reg[12]/CE
+accumulator_reg[12]/CLR
+accumulator_reg[12]/D
+accumulator_reg[13]/CE
+accumulator_reg[13]/CLR
+accumulator_reg[13]/D
+accumulator_reg[14]/CE
+accumulator_reg[14]/CLR
+accumulator_reg[14]/D
+accumulator_reg[15]/CE
+accumulator_reg[15]/CLR
+accumulator_reg[15]/D
+accumulator_reg[16]/CE
+accumulator_reg[16]/CLR
+accumulator_reg[16]/D
+accumulator_reg[17]/CE
+accumulator_reg[17]/CLR
+accumulator_reg[17]/D
+accumulator_reg[18]/CE
+accumulator_reg[18]/CLR
+accumulator_reg[18]/D
+accumulator_reg[19]/CE
+accumulator_reg[19]/CLR
+accumulator_reg[19]/D
+accumulator_reg[1]/CE
+accumulator_reg[1]/CLR
+accumulator_reg[1]/D
+accumulator_reg[20]/CE
+accumulator_reg[20]/CLR
+accumulator_reg[20]/D
+accumulator_reg[21]/CE
+accumulator_reg[21]/CLR
+accumulator_reg[21]/D
+accumulator_reg[22]/CE
+accumulator_reg[22]/CLR
+accumulator_reg[22]/D
+accumulator_reg[23]/CE
+accumulator_reg[23]/CLR
+accumulator_reg[23]/D
+accumulator_reg[24]/CE
+accumulator_reg[24]/CLR
+accumulator_reg[24]/D
+accumulator_reg[25]/CE
+accumulator_reg[25]/CLR
+accumulator_reg[25]/D
+accumulator_reg[26]/CE
+accumulator_reg[26]/CLR
+accumulator_reg[26]/D
+accumulator_reg[27]/CE
+accumulator_reg[27]/CLR
+accumulator_reg[27]/D
+accumulator_reg[28]/CE
+accumulator_reg[28]/CLR
+accumulator_reg[28]/D
+accumulator_reg[29]/CE
+accumulator_reg[29]/CLR
+accumulator_reg[29]/D
+accumulator_reg[2]/CE
+accumulator_reg[2]/CLR
+accumulator_reg[2]/D
+accumulator_reg[30]/CE
+accumulator_reg[30]/CLR
+accumulator_reg[30]/D
+accumulator_reg[31]/CE
+accumulator_reg[31]/CLR
+accumulator_reg[31]/D
+accumulator_reg[3]/CE
+accumulator_reg[3]/CLR
+accumulator_reg[3]/D
+accumulator_reg[4]/CE
+accumulator_reg[4]/CLR
+accumulator_reg[4]/D
+accumulator_reg[5]/CE
+accumulator_reg[5]/CLR
+accumulator_reg[5]/D
+accumulator_reg[6]/CE
+accumulator_reg[6]/CLR
+accumulator_reg[6]/D
+accumulator_reg[7]/CE
+accumulator_reg[7]/CLR
+accumulator_reg[7]/D
+accumulator_reg[8]/CE
+accumulator_reg[8]/CLR
+accumulator_reg[8]/D
+accumulator_reg[9]/CE
+accumulator_reg[9]/CLR
+accumulator_reg[9]/D
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (19)
+-------------------------------
+ There are 19 input ports with no input delay specified. (HIGH)
+
+clear
+enable
+pixel[0]
+pixel[1]
+pixel[2]
+pixel[3]
+pixel[4]
+pixel[5]
+pixel[6]
+pixel[7]
+rstn
+weight[0]
+weight[1]
+weight[2]
+weight[3]
+weight[4]
+weight[5]
+weight[6]
+weight[7]
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (32)
+--------------------------------
+ There are 32 ports with no output delay specified. (HIGH)
+
+accumulator[0]
+accumulator[10]
+accumulator[11]
+accumulator[12]
+accumulator[13]
+accumulator[14]
+accumulator[15]
+accumulator[16]
+accumulator[17]
+accumulator[18]
+accumulator[19]
+accumulator[1]
+accumulator[20]
+accumulator[21]
+accumulator[22]
+accumulator[23]
+accumulator[24]
+accumulator[25]
+accumulator[26]
+accumulator[27]
+accumulator[28]
+accumulator[29]
+accumulator[2]
+accumulator[30]
+accumulator[31]
+accumulator[3]
+accumulator[4]
+accumulator[5]
+accumulator[6]
+accumulator[7]
+accumulator[8]
+accumulator[9]
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  128          inf        0.000                      0                  128           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           128 Endpoints
+Min Delay           128 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.847ns  (logic 4.847ns (61.762%)  route 3.001ns (38.238%))
+  Logic Levels:           15  (CARRY4=9 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.510 r  accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.510    accumulator_reg[24]_i_1_n_0
+                                                                      r  accumulator_reg[28]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     7.847 r  accumulator_reg[28]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     7.847    accumulator_reg[28]_i_1_n_6
+                         FDCE                                         r  accumulator_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.841ns  (logic 4.841ns (61.732%)  route 3.001ns (38.268%))
+  Logic Levels:           15  (CARRY4=9 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.510 r  accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.510    accumulator_reg[24]_i_1_n_0
+                                                                      r  accumulator_reg[28]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     7.841 r  accumulator_reg[28]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     7.841    accumulator_reg[28]_i_1_n_4
+                         FDCE                                         r  accumulator_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.766ns  (logic 4.766ns (61.363%)  route 3.001ns (38.637%))
+  Logic Levels:           15  (CARRY4=9 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.510 r  accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.510    accumulator_reg[24]_i_1_n_0
+                                                                      r  accumulator_reg[28]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     7.766 r  accumulator_reg[28]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     7.766    accumulator_reg[28]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.742ns  (logic 4.742ns (61.243%)  route 3.001ns (38.757%))
+  Logic Levels:           15  (CARRY4=9 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.510 r  accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.510    accumulator_reg[24]_i_1_n_0
+                                                                      r  accumulator_reg[28]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232     7.742 r  accumulator_reg[28]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000     7.742    accumulator_reg[28]_i_1_n_7
+                         FDCE                                         r  accumulator_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[25]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.730ns  (logic 4.730ns (61.183%)  route 3.001ns (38.817%))
+  Logic Levels:           14  (CARRY4=8 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     7.730 r  accumulator_reg[24]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     7.730    accumulator_reg[24]_i_1_n_6
+                         FDCE                                         r  accumulator_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.724ns  (logic 4.724ns (61.153%)  route 3.001ns (38.847%))
+  Logic Levels:           14  (CARRY4=8 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     7.724 r  accumulator_reg[24]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     7.724    accumulator_reg[24]_i_1_n_4
+                         FDCE                                         r  accumulator_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[26]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.649ns  (logic 4.649ns (60.772%)  route 3.001ns (39.228%))
+  Logic Levels:           14  (CARRY4=8 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     7.649 r  accumulator_reg[24]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     7.649    accumulator_reg[24]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.625ns  (logic 4.625ns (60.648%)  route 3.001ns (39.352%))
+  Logic Levels:           14  (CARRY4=8 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.393 r  accumulator_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.393    accumulator_reg[20]_i_1_n_0
+                                                                      r  accumulator_reg[24]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232     7.625 r  accumulator_reg[24]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000     7.625    accumulator_reg[24]_i_1_n_7
+                         FDCE                                         r  accumulator_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[21]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.613ns  (logic 4.613ns (60.586%)  route 3.001ns (39.414%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     7.613 r  accumulator_reg[20]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     7.613    accumulator_reg[20]_i_1_n_6
+                         FDCE                                         r  accumulator_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight[0]
+                            (input port)
+  Destination:            accumulator_reg[23]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.607ns  (logic 4.607ns (60.555%)  route 3.001ns (39.445%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT2=2 LUT3=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    weight[0]
+                                                                      f  weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  weight_IBUF[0]_inst/O
+                         net (fo=16, unplaced)        0.800     1.771    weight_IBUF[0]
+                                                                      f  accumulator[0]_i_29/I1
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.895 r  accumulator[0]_i_29/O
+                         net (fo=1, unplaced)         0.449     2.344    accumulator[0]_i_29_n_0
+                                                                      r  accumulator[0]_i_24/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.468 r  accumulator[0]_i_24/O
+                         net (fo=1, unplaced)         0.000     2.468    accumulator[0]_i_24_n_0
+                                                                      r  accumulator_reg[0]_i_13/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.844 r  accumulator_reg[0]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     2.853    accumulator_reg[0]_i_13_n_0
+                                                                      r  accumulator_reg[4]_i_19/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     3.184 r  accumulator_reg[4]_i_19/O[3]
+                         net (fo=2, unplaced)         0.629     3.813    accumulator_reg[4]_i_19_n_4
+                                                                      r  accumulator[8]_i_14/I2
+                         LUT3 (Prop_lut3_I2_O)        0.302     4.115 r  accumulator[8]_i_14/O
+                         net (fo=2, unplaced)         0.485     4.600    accumulator[8]_i_14_n_0
+                                                                      r  accumulator[8]_i_18/I3
+                         LUT4 (Prop_lut4_I3_O)        0.355     4.955 r  accumulator[8]_i_18/O
+                         net (fo=1, unplaced)         0.000     4.955    accumulator[8]_i_18_n_0
+                                                                      r  accumulator_reg[8]_i_10/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.468 r  accumulator_reg[8]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     5.468    accumulator_reg[8]_i_10_n_0
+                                                                      r  accumulator_reg[12]_i_10/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     5.799 r  accumulator_reg[12]_i_10/O[3]
+                         net (fo=2, unplaced)         0.629     6.428    product[15]
+                                                                      r  accumulator[12]_i_2/I0
+                         LUT2 (Prop_lut2_I0_O)        0.302     6.730 r  accumulator[12]_i_2/O
+                         net (fo=1, unplaced)         0.000     6.730    accumulator[12]_i_2_n_0
+                                                                      r  accumulator_reg[12]_i_1/DI[3]
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.429     7.159 r  accumulator_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.159    accumulator_reg[12]_i_1_n_0
+                                                                      r  accumulator_reg[16]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.276 r  accumulator_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     7.276    accumulator_reg[16]_i_1_n_0
+                                                                      r  accumulator_reg[20]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     7.607 r  accumulator_reg[20]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     7.607    accumulator_reg[20]_i_1_n_4
+                         FDCE                                         r  accumulator_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 accumulator_reg[10]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[10]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[10]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[10]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[10]
+                                                                      r  accumulator[8]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[8]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[8]_i_7_n_0
+                                                                      r  accumulator_reg[8]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[8]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[8]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[14]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[14]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[14]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[14]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[14]
+                                                                      r  accumulator[12]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[12]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[12]_i_7_n_0
+                                                                      r  accumulator_reg[12]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[12]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[12]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[18]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[18]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[18]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[18]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[18]
+                                                                      r  accumulator[16]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[16]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[16]_i_7_n_0
+                                                                      r  accumulator_reg[16]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[16]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[16]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[22]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[22]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[22]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[22]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[22]
+                                                                      r  accumulator[20]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[20]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[20]_i_7_n_0
+                                                                      r  accumulator_reg[20]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[20]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[20]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[26]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[26]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[26]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[26]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[26]
+                                                                      r  accumulator[24]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[24]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[24]_i_7_n_0
+                                                                      r  accumulator_reg[24]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[24]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[24]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[2]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[2]
+                                                                      r  accumulator[0]_i_9/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[0]_i_9/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[0]_i_9_n_0
+                                                                      r  accumulator_reg[0]_i_2/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[0]_i_2/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[0]_i_2_n_5
+                         FDCE                                         r  accumulator_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[30]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[30]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[30]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[30]
+                                                                      r  accumulator[28]_i_6/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[28]_i_6/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[28]_i_6_n_0
+                                                                      r  accumulator_reg[28]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[28]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[28]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[6]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.461ns  (logic 0.257ns (55.696%)  route 0.204ns (44.304%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[6]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[6]/Q
+                         net (fo=2, unplaced)         0.204     0.351    accumulator_OBUF[6]
+                                                                      r  accumulator[4]_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.396 r  accumulator[4]_i_7/O
+                         net (fo=1, unplaced)         0.000     0.396    accumulator[4]_i_7_n_0
+                                                                      r  accumulator_reg[4]_i_1/S[2]
+                         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.065     0.461 r  accumulator_reg[4]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     0.461    accumulator_reg[4]_i_1_n_5
+                         FDCE                                         r  accumulator_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[13]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[13]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.464ns  (logic 0.258ns (55.589%)  route 0.206ns (44.411%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[13]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[13]/Q
+                         net (fo=2, unplaced)         0.206     0.353    accumulator_OBUF[13]
+                                                                      r  accumulator[12]_i_8/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.398 r  accumulator[12]_i_8/O
+                         net (fo=1, unplaced)         0.000     0.398    accumulator[12]_i_8_n_0
+                                                                      r  accumulator_reg[12]_i_1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.066     0.464 r  accumulator_reg[12]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     0.464    accumulator_reg[12]_i_1_n_6
+                         FDCE                                         r  accumulator_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 accumulator_reg[17]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            accumulator_reg[17]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.464ns  (logic 0.258ns (55.589%)  route 0.206ns (44.411%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  accumulator_reg[17]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  accumulator_reg[17]/Q
+                         net (fo=2, unplaced)         0.206     0.353    accumulator_OBUF[17]
+                                                                      r  accumulator[16]_i_8/I2
+                         LUT3 (Prop_lut3_I2_O)        0.045     0.398 r  accumulator[16]_i_8/O
+                         net (fo=1, unplaced)         0.000     0.398    accumulator[16]_i_8_n_0
+                                                                      r  accumulator_reg[16]_i_1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.066     0.464 r  accumulator_reg[16]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     0.464    accumulator_reg[16]_i_1_n_6
+                         FDCE                                         r  accumulator_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

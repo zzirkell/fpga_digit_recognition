@@ -25,7 +25,7 @@ ACC_SHIFTS = range(8, 19)
 INTEGER_TRAIN_LIMIT = 10_000
 
 #experiment B
-TRAIN_ACC_SHIFT = 9
+TRAIN_ACC_SHIFT = 12
 #scale weight update
 TRAIN_SHIFTS = range(15, 23)
 
@@ -229,10 +229,7 @@ for shift in ACC_SHIFTS:
         best_acc_shift = shift #10
 
 
-# =========================================================
-# Selected ACC_SHIFT
-# =========================================================
-
+#selected ACC_SHIFT
 print()
 print("Best fixed-point forward configuration")
 print(f"ACC_SHIFT = {best_acc_shift}")

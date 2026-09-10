@@ -1,0 +1,674 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Sep 10 21:14:36 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_argmax.txt
+| Design       : argmax
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                    4          inf        0.000                      0                    4           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             4 Endpoints
+Min Delay             4 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 activation0[0]
+                            (input port)
+  Destination:            prediction[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.732ns  (logic 6.186ns (29.839%)  route 14.545ns (70.161%))
+  Logic Levels:           23  (IBUF=1 LUT2=1 LUT3=3 LUT5=11 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation0[0] (IN)
+                         net (fo=0)                   0.000     0.000    activation0[0]
+                                                                      f  activation0_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  activation0_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.800     1.771    activation0_IBUF[0]
+                                                                      f  prediction_OBUF[0]_inst_i_15/I5
+                         LUT6 (Prop_lut6_I5_O)        0.124     1.895 r  prediction_OBUF[0]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     2.344    prediction_OBUF[0]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_11/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     2.468 r  prediction_OBUF[0]_inst_i_11/O
+                         net (fo=4, unplaced)         0.473     2.941    prediction_OBUF[0]_inst_i_11_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124     3.065 r  prediction_OBUF[0]_inst_i_7/O
+                         net (fo=4, unplaced)         0.473     3.538    prediction_OBUF[0]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_18/I1
+                         LUT3 (Prop_lut3_I1_O)        0.116     3.654 f  prediction_OBUF[2]_inst_i_18/O
+                         net (fo=3, unplaced)         0.920     4.574    prediction_OBUF[2]_inst_i_18_n_0
+                                                                      f  prediction_OBUF[1]_inst_i_6/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.698 r  prediction_OBUF[1]_inst_i_6/O
+                         net (fo=2, unplaced)         0.460     5.158    prediction_OBUF[1]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[1]_inst_i_3/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.282 f  prediction_OBUF[1]_inst_i_3/O
+                         net (fo=8, unplaced)         0.940     6.222    prediction_OBUF[1]_inst_i_3_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_20/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.346 f  prediction_OBUF[2]_inst_i_20/O
+                         net (fo=3, unplaced)         0.920     7.266    prediction_OBUF[2]_inst_i_20_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_13/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.390 r  prediction_OBUF[2]_inst_i_13/O
+                         net (fo=1, unplaced)         0.449     7.839    prediction_OBUF[2]_inst_i_13_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.963 r  prediction_OBUF[2]_inst_i_6/O
+                         net (fo=3, unplaced)         0.467     8.430    prediction_OBUF[2]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_2/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     8.554 f  prediction_OBUF[2]_inst_i_2/O
+                         net (fo=8, unplaced)         0.940     9.494    prediction_OBUF[2]_inst_i_2_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_25/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     9.618 f  prediction_OBUF[3]_inst_i_25/O
+                         net (fo=3, unplaced)         0.920    10.538    prediction_OBUF[3]_inst_i_25_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_24/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124    10.662 r  prediction_OBUF[2]_inst_i_24/O
+                         net (fo=1, unplaced)         0.449    11.111    prediction_OBUF[2]_inst_i_24_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_17/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    11.235 r  prediction_OBUF[2]_inst_i_17/O
+                         net (fo=1, unplaced)         0.449    11.684    prediction_OBUF[2]_inst_i_17_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_9/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124    11.808 r  prediction_OBUF[2]_inst_i_9/O
+                         net (fo=7, unplaced)         0.484    12.292    prediction_OBUF[2]_inst_i_9_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_7/I1
+                         LUT2 (Prop_lut2_I1_O)        0.116    12.408 r  prediction_OBUF[3]_inst_i_7/O
+                         net (fo=4, unplaced)         0.926    13.334    prediction_OBUF[3]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_10/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.458 f  prediction_OBUF[3]_inst_i_10/O
+                         net (fo=2, unplaced)         0.913    14.371    prediction_OBUF[3]_inst_i_10_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_3/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    14.495 r  prediction_OBUF[3]_inst_i_3/O
+                         net (fo=9, unplaced)         0.490    14.985    prediction_OBUF[3]_inst_i_3_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_22/I3
+                         LUT5 (Prop_lut5_I3_O)        0.116    15.101 f  prediction_OBUF[3]_inst_i_22/O
+                         net (fo=1, unplaced)         0.902    16.003    max_activation[2]
+                                                                      f  prediction_OBUF[3]_inst_i_15/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    16.127 r  prediction_OBUF[3]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449    16.576    prediction_OBUF[3]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_5/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    16.700 r  prediction_OBUF[3]_inst_i_5/O
+                         net (fo=4, unplaced)         0.473    17.173    prediction_OBUF[3]_inst_i_5_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_1/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124    17.297 r  prediction_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    18.097    prediction_OBUF[0]
+                                                                      r  prediction_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    20.732 r  prediction_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    20.732    prediction[0]
+                                                                      r  prediction[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation0[0]
+                            (input port)
+  Destination:            prediction[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.732ns  (logic 6.186ns (29.839%)  route 14.545ns (70.161%))
+  Logic Levels:           23  (IBUF=1 LUT2=1 LUT3=3 LUT5=11 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation0[0] (IN)
+                         net (fo=0)                   0.000     0.000    activation0[0]
+                                                                      f  activation0_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  activation0_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.800     1.771    activation0_IBUF[0]
+                                                                      f  prediction_OBUF[0]_inst_i_15/I5
+                         LUT6 (Prop_lut6_I5_O)        0.124     1.895 r  prediction_OBUF[0]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     2.344    prediction_OBUF[0]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_11/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     2.468 r  prediction_OBUF[0]_inst_i_11/O
+                         net (fo=4, unplaced)         0.473     2.941    prediction_OBUF[0]_inst_i_11_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124     3.065 r  prediction_OBUF[0]_inst_i_7/O
+                         net (fo=4, unplaced)         0.473     3.538    prediction_OBUF[0]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_18/I1
+                         LUT3 (Prop_lut3_I1_O)        0.116     3.654 f  prediction_OBUF[2]_inst_i_18/O
+                         net (fo=3, unplaced)         0.920     4.574    prediction_OBUF[2]_inst_i_18_n_0
+                                                                      f  prediction_OBUF[1]_inst_i_6/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.698 r  prediction_OBUF[1]_inst_i_6/O
+                         net (fo=2, unplaced)         0.460     5.158    prediction_OBUF[1]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[1]_inst_i_3/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.282 f  prediction_OBUF[1]_inst_i_3/O
+                         net (fo=8, unplaced)         0.940     6.222    prediction_OBUF[1]_inst_i_3_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_20/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.346 f  prediction_OBUF[2]_inst_i_20/O
+                         net (fo=3, unplaced)         0.920     7.266    prediction_OBUF[2]_inst_i_20_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_13/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.390 r  prediction_OBUF[2]_inst_i_13/O
+                         net (fo=1, unplaced)         0.449     7.839    prediction_OBUF[2]_inst_i_13_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.963 r  prediction_OBUF[2]_inst_i_6/O
+                         net (fo=3, unplaced)         0.467     8.430    prediction_OBUF[2]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_2/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     8.554 f  prediction_OBUF[2]_inst_i_2/O
+                         net (fo=8, unplaced)         0.940     9.494    prediction_OBUF[2]_inst_i_2_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_25/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     9.618 f  prediction_OBUF[3]_inst_i_25/O
+                         net (fo=3, unplaced)         0.920    10.538    prediction_OBUF[3]_inst_i_25_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_24/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124    10.662 r  prediction_OBUF[2]_inst_i_24/O
+                         net (fo=1, unplaced)         0.449    11.111    prediction_OBUF[2]_inst_i_24_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_17/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    11.235 r  prediction_OBUF[2]_inst_i_17/O
+                         net (fo=1, unplaced)         0.449    11.684    prediction_OBUF[2]_inst_i_17_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_9/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124    11.808 r  prediction_OBUF[2]_inst_i_9/O
+                         net (fo=7, unplaced)         0.484    12.292    prediction_OBUF[2]_inst_i_9_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_7/I1
+                         LUT2 (Prop_lut2_I1_O)        0.116    12.408 r  prediction_OBUF[3]_inst_i_7/O
+                         net (fo=4, unplaced)         0.926    13.334    prediction_OBUF[3]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_10/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.458 f  prediction_OBUF[3]_inst_i_10/O
+                         net (fo=2, unplaced)         0.913    14.371    prediction_OBUF[3]_inst_i_10_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_3/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    14.495 r  prediction_OBUF[3]_inst_i_3/O
+                         net (fo=9, unplaced)         0.490    14.985    prediction_OBUF[3]_inst_i_3_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_22/I3
+                         LUT5 (Prop_lut5_I3_O)        0.116    15.101 r  prediction_OBUF[3]_inst_i_22/O
+                         net (fo=1, unplaced)         0.902    16.003    max_activation[2]
+                                                                      r  prediction_OBUF[3]_inst_i_15/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    16.127 f  prediction_OBUF[3]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449    16.576    prediction_OBUF[3]_inst_i_15_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_5/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    16.700 f  prediction_OBUF[3]_inst_i_5/O
+                         net (fo=4, unplaced)         0.473    17.173    prediction_OBUF[3]_inst_i_5_n_0
+                                                                      f  prediction_OBUF[1]_inst_i_1/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124    17.297 r  prediction_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    18.097    prediction_OBUF[1]
+                                                                      r  prediction_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    20.732 r  prediction_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    20.732    prediction[1]
+                                                                      r  prediction[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation0[0]
+                            (input port)
+  Destination:            prediction[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.732ns  (logic 6.186ns (29.839%)  route 14.545ns (70.161%))
+  Logic Levels:           23  (IBUF=1 LUT2=1 LUT3=3 LUT5=10 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation0[0] (IN)
+                         net (fo=0)                   0.000     0.000    activation0[0]
+                                                                      f  activation0_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  activation0_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.800     1.771    activation0_IBUF[0]
+                                                                      f  prediction_OBUF[0]_inst_i_15/I5
+                         LUT6 (Prop_lut6_I5_O)        0.124     1.895 r  prediction_OBUF[0]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     2.344    prediction_OBUF[0]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_11/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     2.468 r  prediction_OBUF[0]_inst_i_11/O
+                         net (fo=4, unplaced)         0.473     2.941    prediction_OBUF[0]_inst_i_11_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124     3.065 r  prediction_OBUF[0]_inst_i_7/O
+                         net (fo=4, unplaced)         0.473     3.538    prediction_OBUF[0]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_18/I1
+                         LUT3 (Prop_lut3_I1_O)        0.116     3.654 f  prediction_OBUF[2]_inst_i_18/O
+                         net (fo=3, unplaced)         0.920     4.574    prediction_OBUF[2]_inst_i_18_n_0
+                                                                      f  prediction_OBUF[1]_inst_i_6/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.698 r  prediction_OBUF[1]_inst_i_6/O
+                         net (fo=2, unplaced)         0.460     5.158    prediction_OBUF[1]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[1]_inst_i_3/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.282 f  prediction_OBUF[1]_inst_i_3/O
+                         net (fo=8, unplaced)         0.940     6.222    prediction_OBUF[1]_inst_i_3_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_20/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.346 f  prediction_OBUF[2]_inst_i_20/O
+                         net (fo=3, unplaced)         0.920     7.266    prediction_OBUF[2]_inst_i_20_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_13/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.390 r  prediction_OBUF[2]_inst_i_13/O
+                         net (fo=1, unplaced)         0.449     7.839    prediction_OBUF[2]_inst_i_13_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.963 r  prediction_OBUF[2]_inst_i_6/O
+                         net (fo=3, unplaced)         0.467     8.430    prediction_OBUF[2]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_2/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     8.554 f  prediction_OBUF[2]_inst_i_2/O
+                         net (fo=8, unplaced)         0.940     9.494    prediction_OBUF[2]_inst_i_2_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_25/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     9.618 f  prediction_OBUF[3]_inst_i_25/O
+                         net (fo=3, unplaced)         0.920    10.538    prediction_OBUF[3]_inst_i_25_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_24/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124    10.662 r  prediction_OBUF[2]_inst_i_24/O
+                         net (fo=1, unplaced)         0.449    11.111    prediction_OBUF[2]_inst_i_24_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_17/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    11.235 r  prediction_OBUF[2]_inst_i_17/O
+                         net (fo=1, unplaced)         0.449    11.684    prediction_OBUF[2]_inst_i_17_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_9/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124    11.808 r  prediction_OBUF[2]_inst_i_9/O
+                         net (fo=7, unplaced)         0.484    12.292    prediction_OBUF[2]_inst_i_9_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_7/I1
+                         LUT2 (Prop_lut2_I1_O)        0.116    12.408 r  prediction_OBUF[3]_inst_i_7/O
+                         net (fo=4, unplaced)         0.926    13.334    prediction_OBUF[3]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_10/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.458 f  prediction_OBUF[3]_inst_i_10/O
+                         net (fo=2, unplaced)         0.913    14.371    prediction_OBUF[3]_inst_i_10_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_3/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    14.495 r  prediction_OBUF[3]_inst_i_3/O
+                         net (fo=9, unplaced)         0.490    14.985    prediction_OBUF[3]_inst_i_3_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_22/I3
+                         LUT5 (Prop_lut5_I3_O)        0.116    15.101 r  prediction_OBUF[3]_inst_i_22/O
+                         net (fo=1, unplaced)         0.902    16.003    max_activation[2]
+                                                                      r  prediction_OBUF[3]_inst_i_15/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    16.127 f  prediction_OBUF[3]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449    16.576    prediction_OBUF[3]_inst_i_15_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_5/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    16.700 f  prediction_OBUF[3]_inst_i_5/O
+                         net (fo=4, unplaced)         0.473    17.173    prediction_OBUF[3]_inst_i_5_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124    17.297 r  prediction_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    18.097    prediction_OBUF[2]
+                                                                      r  prediction_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    20.732 r  prediction_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    20.732    prediction[2]
+                                                                      r  prediction[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation0[0]
+                            (input port)
+  Destination:            prediction[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.732ns  (logic 6.186ns (29.839%)  route 14.545ns (70.161%))
+  Logic Levels:           23  (IBUF=1 LUT2=1 LUT3=3 LUT5=10 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation0[0] (IN)
+                         net (fo=0)                   0.000     0.000    activation0[0]
+                                                                      f  activation0_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 f  activation0_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.800     1.771    activation0_IBUF[0]
+                                                                      f  prediction_OBUF[0]_inst_i_15/I5
+                         LUT6 (Prop_lut6_I5_O)        0.124     1.895 r  prediction_OBUF[0]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     2.344    prediction_OBUF[0]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_11/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     2.468 r  prediction_OBUF[0]_inst_i_11/O
+                         net (fo=4, unplaced)         0.473     2.941    prediction_OBUF[0]_inst_i_11_n_0
+                                                                      r  prediction_OBUF[0]_inst_i_7/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124     3.065 r  prediction_OBUF[0]_inst_i_7/O
+                         net (fo=4, unplaced)         0.473     3.538    prediction_OBUF[0]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_18/I1
+                         LUT3 (Prop_lut3_I1_O)        0.116     3.654 f  prediction_OBUF[2]_inst_i_18/O
+                         net (fo=3, unplaced)         0.920     4.574    prediction_OBUF[2]_inst_i_18_n_0
+                                                                      f  prediction_OBUF[1]_inst_i_6/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.698 r  prediction_OBUF[1]_inst_i_6/O
+                         net (fo=2, unplaced)         0.460     5.158    prediction_OBUF[1]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[1]_inst_i_3/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.282 f  prediction_OBUF[1]_inst_i_3/O
+                         net (fo=8, unplaced)         0.940     6.222    prediction_OBUF[1]_inst_i_3_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_20/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.346 f  prediction_OBUF[2]_inst_i_20/O
+                         net (fo=3, unplaced)         0.920     7.266    prediction_OBUF[2]_inst_i_20_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_13/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.390 r  prediction_OBUF[2]_inst_i_13/O
+                         net (fo=1, unplaced)         0.449     7.839    prediction_OBUF[2]_inst_i_13_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.963 r  prediction_OBUF[2]_inst_i_6/O
+                         net (fo=3, unplaced)         0.467     8.430    prediction_OBUF[2]_inst_i_6_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_2/I2
+                         LUT5 (Prop_lut5_I2_O)        0.124     8.554 f  prediction_OBUF[2]_inst_i_2/O
+                         net (fo=8, unplaced)         0.940     9.494    prediction_OBUF[2]_inst_i_2_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_25/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     9.618 f  prediction_OBUF[3]_inst_i_25/O
+                         net (fo=3, unplaced)         0.920    10.538    prediction_OBUF[3]_inst_i_25_n_0
+                                                                      f  prediction_OBUF[2]_inst_i_24/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124    10.662 r  prediction_OBUF[2]_inst_i_24/O
+                         net (fo=1, unplaced)         0.449    11.111    prediction_OBUF[2]_inst_i_24_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_17/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    11.235 r  prediction_OBUF[2]_inst_i_17/O
+                         net (fo=1, unplaced)         0.449    11.684    prediction_OBUF[2]_inst_i_17_n_0
+                                                                      r  prediction_OBUF[2]_inst_i_9/I2
+                         LUT3 (Prop_lut3_I2_O)        0.124    11.808 r  prediction_OBUF[2]_inst_i_9/O
+                         net (fo=7, unplaced)         0.484    12.292    prediction_OBUF[2]_inst_i_9_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_7/I1
+                         LUT2 (Prop_lut2_I1_O)        0.116    12.408 r  prediction_OBUF[3]_inst_i_7/O
+                         net (fo=4, unplaced)         0.926    13.334    prediction_OBUF[3]_inst_i_7_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_10/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.458 f  prediction_OBUF[3]_inst_i_10/O
+                         net (fo=2, unplaced)         0.913    14.371    prediction_OBUF[3]_inst_i_10_n_0
+                                                                      f  prediction_OBUF[3]_inst_i_3/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    14.495 r  prediction_OBUF[3]_inst_i_3/O
+                         net (fo=9, unplaced)         0.490    14.985    prediction_OBUF[3]_inst_i_3_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_22/I3
+                         LUT5 (Prop_lut5_I3_O)        0.116    15.101 f  prediction_OBUF[3]_inst_i_22/O
+                         net (fo=1, unplaced)         0.902    16.003    max_activation[2]
+                                                                      f  prediction_OBUF[3]_inst_i_15/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124    16.127 r  prediction_OBUF[3]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449    16.576    prediction_OBUF[3]_inst_i_15_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_5/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124    16.700 r  prediction_OBUF[3]_inst_i_5/O
+                         net (fo=4, unplaced)         0.473    17.173    prediction_OBUF[3]_inst_i_5_n_0
+                                                                      r  prediction_OBUF[3]_inst_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124    17.297 r  prediction_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    18.097    prediction_OBUF[3]
+                                                                      r  prediction_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    20.732 r  prediction_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    20.732    prediction[3]
+                                                                      r  prediction[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 activation9[5]
+                            (input port)
+  Destination:            prediction[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.071ns  (logic 1.397ns (67.444%)  route 0.674ns (32.556%))
+  Logic Levels:           3  (IBUF=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation9[5] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[5]
+                                                                      r  activation9_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  activation9_IBUF[5]_inst/O
+                         net (fo=4, unplaced)         0.337     0.538    activation9_IBUF[5]
+                                                                      r  prediction_OBUF[0]_inst_i_1/I2
+                         LUT5 (Prop_lut5_I2_O)        0.045     0.583 r  prediction_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     0.920    prediction_OBUF[0]
+                                                                      r  prediction_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.071 r  prediction_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.071    prediction[0]
+                                                                      r  prediction[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[5]
+                            (input port)
+  Destination:            prediction[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.071ns  (logic 1.397ns (67.444%)  route 0.674ns (32.556%))
+  Logic Levels:           3  (IBUF=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation9[5] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[5]
+                                                                      f  activation9_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 f  activation9_IBUF[5]_inst/O
+                         net (fo=4, unplaced)         0.337     0.538    activation9_IBUF[5]
+                                                                      f  prediction_OBUF[1]_inst_i_1/I2
+                         LUT5 (Prop_lut5_I2_O)        0.045     0.583 r  prediction_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     0.920    prediction_OBUF[1]
+                                                                      r  prediction_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.071 r  prediction_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.071    prediction[1]
+                                                                      r  prediction[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[5]
+                            (input port)
+  Destination:            prediction[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.071ns  (logic 1.397ns (67.444%)  route 0.674ns (32.556%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  activation9[5] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[5]
+                                                                      f  activation9_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 f  activation9_IBUF[5]_inst/O
+                         net (fo=4, unplaced)         0.337     0.538    activation9_IBUF[5]
+                                                                      f  prediction_OBUF[2]_inst_i_1/I3
+                         LUT6 (Prop_lut6_I3_O)        0.045     0.583 r  prediction_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     0.920    prediction_OBUF[2]
+                                                                      r  prediction_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.071 r  prediction_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     2.071    prediction[2]
+                                                                      r  prediction[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[5]
+                            (input port)
+  Destination:            prediction[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.071ns  (logic 1.397ns (67.444%)  route 0.674ns (32.556%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation9[5] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[5]
+                                                                      r  activation9_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  activation9_IBUF[5]_inst/O
+                         net (fo=4, unplaced)         0.337     0.538    activation9_IBUF[5]
+                                                                      r  prediction_OBUF[3]_inst_i_1/I5
+                         LUT6 (Prop_lut6_I5_O)        0.045     0.583 r  prediction_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     0.920    prediction_OBUF[3]
+                                                                      r  prediction_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.071 r  prediction_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.071    prediction[3]
+                                                                      r  prediction[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

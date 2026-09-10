@@ -1,0 +1,1121 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Sep 10 20:42:53 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_neuron_forward.txt
+| Design       : neuron_forward
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  32          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (32)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (96)
+5. checking no_input_delay (19)
+6. checking no_output_delay (47)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (32)
+-------------------------
+ There are 32 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+mac_inst/accumulator_reg[0]/C
+mac_inst/accumulator_reg[10]/C
+mac_inst/accumulator_reg[11]/C
+mac_inst/accumulator_reg[12]/C
+mac_inst/accumulator_reg[13]/C
+mac_inst/accumulator_reg[14]/C
+mac_inst/accumulator_reg[15]/C
+mac_inst/accumulator_reg[16]/C
+mac_inst/accumulator_reg[17]/C
+mac_inst/accumulator_reg[18]/C
+mac_inst/accumulator_reg[19]/C
+mac_inst/accumulator_reg[1]/C
+mac_inst/accumulator_reg[20]/C
+mac_inst/accumulator_reg[21]/C
+mac_inst/accumulator_reg[22]/C
+mac_inst/accumulator_reg[23]/C
+mac_inst/accumulator_reg[24]/C
+mac_inst/accumulator_reg[25]/C
+mac_inst/accumulator_reg[26]/C
+mac_inst/accumulator_reg[27]/C
+mac_inst/accumulator_reg[28]/C
+mac_inst/accumulator_reg[29]/C
+mac_inst/accumulator_reg[2]/C
+mac_inst/accumulator_reg[30]/C
+mac_inst/accumulator_reg[31]/C
+mac_inst/accumulator_reg[3]/C
+mac_inst/accumulator_reg[4]/C
+mac_inst/accumulator_reg[5]/C
+mac_inst/accumulator_reg[6]/C
+mac_inst/accumulator_reg[7]/C
+mac_inst/accumulator_reg[8]/C
+mac_inst/accumulator_reg[9]/C
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (96)
+-------------------------------------------------
+ There are 96 pins that are not constrained for maximum delay. (HIGH)
+
+mac_inst/accumulator_reg[0]/CE
+mac_inst/accumulator_reg[0]/CLR
+mac_inst/accumulator_reg[0]/D
+mac_inst/accumulator_reg[10]/CE
+mac_inst/accumulator_reg[10]/CLR
+mac_inst/accumulator_reg[10]/D
+mac_inst/accumulator_reg[11]/CE
+mac_inst/accumulator_reg[11]/CLR
+mac_inst/accumulator_reg[11]/D
+mac_inst/accumulator_reg[12]/CE
+mac_inst/accumulator_reg[12]/CLR
+mac_inst/accumulator_reg[12]/D
+mac_inst/accumulator_reg[13]/CE
+mac_inst/accumulator_reg[13]/CLR
+mac_inst/accumulator_reg[13]/D
+mac_inst/accumulator_reg[14]/CE
+mac_inst/accumulator_reg[14]/CLR
+mac_inst/accumulator_reg[14]/D
+mac_inst/accumulator_reg[15]/CE
+mac_inst/accumulator_reg[15]/CLR
+mac_inst/accumulator_reg[15]/D
+mac_inst/accumulator_reg[16]/CE
+mac_inst/accumulator_reg[16]/CLR
+mac_inst/accumulator_reg[16]/D
+mac_inst/accumulator_reg[17]/CE
+mac_inst/accumulator_reg[17]/CLR
+mac_inst/accumulator_reg[17]/D
+mac_inst/accumulator_reg[18]/CE
+mac_inst/accumulator_reg[18]/CLR
+mac_inst/accumulator_reg[18]/D
+mac_inst/accumulator_reg[19]/CE
+mac_inst/accumulator_reg[19]/CLR
+mac_inst/accumulator_reg[19]/D
+mac_inst/accumulator_reg[1]/CE
+mac_inst/accumulator_reg[1]/CLR
+mac_inst/accumulator_reg[1]/D
+mac_inst/accumulator_reg[20]/CE
+mac_inst/accumulator_reg[20]/CLR
+mac_inst/accumulator_reg[20]/D
+mac_inst/accumulator_reg[21]/CE
+mac_inst/accumulator_reg[21]/CLR
+mac_inst/accumulator_reg[21]/D
+mac_inst/accumulator_reg[22]/CE
+mac_inst/accumulator_reg[22]/CLR
+mac_inst/accumulator_reg[22]/D
+mac_inst/accumulator_reg[23]/CE
+mac_inst/accumulator_reg[23]/CLR
+mac_inst/accumulator_reg[23]/D
+mac_inst/accumulator_reg[24]/CE
+mac_inst/accumulator_reg[24]/CLR
+mac_inst/accumulator_reg[24]/D
+mac_inst/accumulator_reg[25]/CE
+mac_inst/accumulator_reg[25]/CLR
+mac_inst/accumulator_reg[25]/D
+mac_inst/accumulator_reg[26]/CE
+mac_inst/accumulator_reg[26]/CLR
+mac_inst/accumulator_reg[26]/D
+mac_inst/accumulator_reg[27]/CE
+mac_inst/accumulator_reg[27]/CLR
+mac_inst/accumulator_reg[27]/D
+mac_inst/accumulator_reg[28]/CE
+mac_inst/accumulator_reg[28]/CLR
+mac_inst/accumulator_reg[28]/D
+mac_inst/accumulator_reg[29]/CE
+mac_inst/accumulator_reg[29]/CLR
+mac_inst/accumulator_reg[29]/D
+mac_inst/accumulator_reg[2]/CE
+mac_inst/accumulator_reg[2]/CLR
+mac_inst/accumulator_reg[2]/D
+mac_inst/accumulator_reg[30]/CE
+mac_inst/accumulator_reg[30]/CLR
+mac_inst/accumulator_reg[30]/D
+mac_inst/accumulator_reg[31]/CE
+mac_inst/accumulator_reg[31]/CLR
+mac_inst/accumulator_reg[31]/D
+mac_inst/accumulator_reg[3]/CE
+mac_inst/accumulator_reg[3]/CLR
+mac_inst/accumulator_reg[3]/D
+mac_inst/accumulator_reg[4]/CE
+mac_inst/accumulator_reg[4]/CLR
+mac_inst/accumulator_reg[4]/D
+mac_inst/accumulator_reg[5]/CE
+mac_inst/accumulator_reg[5]/CLR
+mac_inst/accumulator_reg[5]/D
+mac_inst/accumulator_reg[6]/CE
+mac_inst/accumulator_reg[6]/CLR
+mac_inst/accumulator_reg[6]/D
+mac_inst/accumulator_reg[7]/CE
+mac_inst/accumulator_reg[7]/CLR
+mac_inst/accumulator_reg[7]/D
+mac_inst/accumulator_reg[8]/CE
+mac_inst/accumulator_reg[8]/CLR
+mac_inst/accumulator_reg[8]/D
+mac_inst/accumulator_reg[9]/CE
+mac_inst/accumulator_reg[9]/CLR
+mac_inst/accumulator_reg[9]/D
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (19)
+-------------------------------
+ There are 19 input ports with no input delay specified. (HIGH)
+
+clear
+enable
+pixel[0]
+pixel[1]
+pixel[2]
+pixel[3]
+pixel[4]
+pixel[5]
+pixel[6]
+pixel[7]
+rstn
+weight[0]
+weight[1]
+weight[2]
+weight[3]
+weight[4]
+weight[5]
+weight[6]
+weight[7]
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (47)
+--------------------------------
+ There are 47 ports with no output delay specified. (HIGH)
+
+accumulator[0]
+accumulator[10]
+accumulator[11]
+accumulator[12]
+accumulator[13]
+accumulator[14]
+accumulator[15]
+accumulator[16]
+accumulator[17]
+accumulator[18]
+accumulator[19]
+accumulator[1]
+accumulator[20]
+accumulator[21]
+accumulator[22]
+accumulator[23]
+accumulator[24]
+accumulator[25]
+accumulator[26]
+accumulator[27]
+accumulator[28]
+accumulator[29]
+accumulator[2]
+accumulator[30]
+accumulator[31]
+accumulator[3]
+accumulator[4]
+accumulator[5]
+accumulator[6]
+accumulator[7]
+accumulator[8]
+accumulator[9]
+activation[0]
+activation[1]
+activation[2]
+activation[3]
+activation[4]
+activation[5]
+plan_input[0]
+plan_input[1]
+plan_input[2]
+plan_input[3]
+plan_input[4]
+plan_input[5]
+plan_input[6]
+plan_input[7]
+plan_input[8]
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  143          inf        0.000                      0                  143           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           143 Endpoints
+Min Delay           143 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[18]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            activation[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.960ns  (logic 4.562ns (38.143%)  route 7.398ns (61.857%))
+  Logic Levels:           9  (CARRY4=3 FDCE=1 LUT2=1 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y96        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[18]/C
+    SLICE_X111Y96        FDCE (Prop_fdce_C_Q)         0.456     0.456 f  mac_inst/accumulator_reg[18]/Q
+                         net (fo=17, routed)          0.995     1.451    mac_inst/accumulator[18]
+    SLICE_X112Y98                                                     f  mac_inst/plan_input_OBUF[8]_inst_i_44/I0
+    SLICE_X112Y98        LUT2 (Prop_lut2_I0_O)        0.124     1.575 r  mac_inst/plan_input_OBUF[8]_inst_i_44/O
+                         net (fo=1, routed)           0.000     1.575    mac_inst/plan_input_OBUF[8]_inst_i_44_n_0
+    SLICE_X112Y98                                                     r  mac_inst/plan_input_OBUF[8]_inst_i_21/S[0]
+    SLICE_X112Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     2.088 r  mac_inst/plan_input_OBUF[8]_inst_i_21/CO[3]
+                         net (fo=1, routed)           0.000     2.088    mac_inst/plan_input_OBUF[8]_inst_i_21_n_0
+    SLICE_X112Y99                                                     r  mac_inst/plan_input_OBUF[8]_inst_i_8/CI
+    SLICE_X112Y99        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.205 r  mac_inst/plan_input_OBUF[8]_inst_i_8/CO[3]
+                         net (fo=1, routed)           0.001     2.205    mac_inst/plan_input_OBUF[8]_inst_i_8_n_0
+    SLICE_X112Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_3/CI
+    SLICE_X112Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.322 f  mac_inst/plan_input_OBUF[8]_inst_i_3/CO[3]
+                         net (fo=19, routed)          3.045     5.368    mac_inst/plan_input10_in
+    SLICE_X113Y64                                                     f  mac_inst/activation_OBUF[1]_inst_i_6/I1
+    SLICE_X113Y64        LUT5 (Prop_lut5_I1_O)        0.154     5.522 r  mac_inst/activation_OBUF[1]_inst_i_6/O
+                         net (fo=2, routed)           0.972     6.493    mac_inst/activation_OBUF[1]_inst_i_6_n_0
+    SLICE_X111Y65                                                     r  mac_inst/activation_OBUF[1]_inst_i_2/I0
+    SLICE_X111Y65        LUT6 (Prop_lut6_I0_O)        0.327     6.820 r  mac_inst/activation_OBUF[1]_inst_i_2/O
+                         net (fo=1, routed)           0.474     7.294    mac_inst/activation_OBUF[1]_inst_i_2_n_0
+    SLICE_X111Y65                                                     r  mac_inst/activation_OBUF[1]_inst_i_1/I0
+    SLICE_X111Y65        LUT4 (Prop_lut4_I0_O)        0.124     7.418 r  mac_inst/activation_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.912     9.330    activation_OBUF[1]
+    T17                                                               r  activation_OBUF[1]_inst/I
+    T17                  OBUF (Prop_obuf_I_O)         2.630    11.960 r  activation_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    11.960    activation[1]
+    T17                                                               r  activation[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[18]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            activation[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.727ns  (logic 4.552ns (38.819%)  route 7.175ns (61.181%))
+  Logic Levels:           9  (CARRY4=3 FDCE=1 LUT2=1 LUT5=2 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y96        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[18]/C
+    SLICE_X111Y96        FDCE (Prop_fdce_C_Q)         0.456     0.456 f  mac_inst/accumulator_reg[18]/Q
+                         net (fo=17, routed)          0.995     1.451    mac_inst/accumulator[18]
+    SLICE_X112Y98                                                     f  mac_inst/plan_input_OBUF[8]_inst_i_44/I0
+    SLICE_X112Y98        LUT2 (Prop_lut2_I0_O)        0.124     1.575 r  mac_inst/plan_input_OBUF[8]_inst_i_44/O
+                         net (fo=1, routed)           0.000     1.575    mac_inst/plan_input_OBUF[8]_inst_i_44_n_0
+    SLICE_X112Y98                                                     r  mac_inst/plan_input_OBUF[8]_inst_i_21/S[0]
+    SLICE_X112Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     2.088 r  mac_inst/plan_input_OBUF[8]_inst_i_21/CO[3]
+                         net (fo=1, routed)           0.000     2.088    mac_inst/plan_input_OBUF[8]_inst_i_21_n_0
+    SLICE_X112Y99                                                     r  mac_inst/plan_input_OBUF[8]_inst_i_8/CI
+    SLICE_X112Y99        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.205 r  mac_inst/plan_input_OBUF[8]_inst_i_8/CO[3]
+                         net (fo=1, routed)           0.001     2.205    mac_inst/plan_input_OBUF[8]_inst_i_8_n_0
+    SLICE_X112Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_3/CI
+    SLICE_X112Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.322 f  mac_inst/plan_input_OBUF[8]_inst_i_3/CO[3]
+                         net (fo=19, routed)          3.045     5.368    mac_inst/plan_input10_in
+    SLICE_X113Y64                                                     f  mac_inst/activation_OBUF[1]_inst_i_6/I1
+    SLICE_X113Y64        LUT5 (Prop_lut5_I1_O)        0.154     5.522 r  mac_inst/activation_OBUF[1]_inst_i_6/O
+                         net (fo=2, routed)           0.457     5.979    mac_inst/activation_OBUF[1]_inst_i_6_n_0
+    SLICE_X112Y65                                                     r  mac_inst/activation_OBUF[0]_inst_i_3/I0
+    SLICE_X112Y65        LUT6 (Prop_lut6_I0_O)        0.327     6.306 r  mac_inst/activation_OBUF[0]_inst_i_3/O
+                         net (fo=1, routed)           0.819     7.125    mac_inst/activation_OBUF[0]_inst_i_3_n_0
+    SLICE_X112Y64                                                     r  mac_inst/activation_OBUF[0]_inst_i_1/I1
+    SLICE_X112Y64        LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  mac_inst/activation_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.857     9.107    activation_OBUF[0]
+    R18                                                               r  activation_OBUF[0]_inst/I
+    R18                  OBUF (Prop_obuf_I_O)         2.620    11.727 r  activation_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    11.727    activation[0]
+    R18                                                               r  activation[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[31]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            activation[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.446ns  (logic 4.201ns (36.703%)  route 7.245ns (63.297%))
+  Logic Levels:           6  (CARRY4=1 FDCE=1 LUT5=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y99        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[31]/C
+    SLICE_X111Y99        FDCE (Prop_fdce_C_Q)         0.456     0.456 r  mac_inst/accumulator_reg[31]/Q
+                         net (fo=24, routed)          1.332     1.788    mac_inst/accumulator[31]
+    SLICE_X113Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_2/S[2]
+    SLICE_X113Y100       CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.522     2.310 f  mac_inst/plan_input_OBUF[8]_inst_i_2/CO[3]
+                         net (fo=19, routed)          2.857     5.167    mac_inst/plan_input1
+    SLICE_X111Y64                                                     f  mac_inst/activation_OBUF[4]_inst_i_4/I1
+    SLICE_X111Y64        LUT5 (Prop_lut5_I1_O)        0.152     5.319 r  mac_inst/activation_OBUF[4]_inst_i_4/O
+                         net (fo=5, routed)           0.693     6.012    mac_inst/activation_OBUF[4]_inst_i_4_n_0
+    SLICE_X110Y64                                                     r  mac_inst/activation_OBUF[2]_inst_i_2/I0
+    SLICE_X110Y64        LUT6 (Prop_lut6_I0_O)        0.326     6.338 r  mac_inst/activation_OBUF[2]_inst_i_2/O
+                         net (fo=1, routed)           0.500     6.838    mac_inst/activation_OBUF[2]_inst_i_2_n_0
+    SLICE_X111Y64                                                     r  mac_inst/activation_OBUF[2]_inst_i_1/I0
+    SLICE_X111Y64        LUT6 (Prop_lut6_I0_O)        0.124     6.962 r  mac_inst/activation_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.864     8.825    activation_OBUF[2]
+    R17                                                               r  activation_OBUF[2]_inst/I
+    R17                  OBUF (Prop_obuf_I_O)         2.621    11.446 r  activation_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    11.446    activation[2]
+    R17                                                               r  activation[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[31]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            activation[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.033ns  (logic 3.977ns (36.043%)  route 7.057ns (63.957%))
+  Logic Levels:           6  (CARRY4=1 FDCE=1 LUT4=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y99        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[31]/C
+    SLICE_X111Y99        FDCE (Prop_fdce_C_Q)         0.456     0.456 r  mac_inst/accumulator_reg[31]/Q
+                         net (fo=24, routed)          1.332     1.788    mac_inst/accumulator[31]
+    SLICE_X113Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_2/S[2]
+    SLICE_X113Y100       CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.522     2.310 f  mac_inst/plan_input_OBUF[8]_inst_i_2/CO[3]
+                         net (fo=19, routed)          2.956     5.265    mac_inst/plan_input1
+    SLICE_X112Y63                                                     f  mac_inst/activation_OBUF[3]_inst_i_3/I2
+    SLICE_X112Y63        LUT6 (Prop_lut6_I2_O)        0.124     5.389 r  mac_inst/activation_OBUF[3]_inst_i_3/O
+                         net (fo=3, routed)           0.812     6.201    mac_inst/activation_OBUF[3]_inst_i_3_n_0
+    SLICE_X111Y63                                                     r  mac_inst/activation_OBUF[3]_inst_i_2/I1
+    SLICE_X111Y63        LUT6 (Prop_lut6_I1_O)        0.124     6.325 r  mac_inst/activation_OBUF[3]_inst_i_2/O
+                         net (fo=1, routed)           0.149     6.474    mac_inst/activation_OBUF[3]_inst_i_2_n_0
+    SLICE_X111Y63                                                     r  mac_inst/activation_OBUF[3]_inst_i_1/I3
+    SLICE_X111Y63        LUT4 (Prop_lut4_I3_O)        0.124     6.598 r  mac_inst/activation_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.809     8.407    activation_OBUF[3]
+    R16                                                               r  activation_OBUF[3]_inst/I
+    R16                  OBUF (Prop_obuf_I_O)         2.627    11.033 r  activation_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    11.033    activation[3]
+    R16                                                               r  activation[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[31]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            activation[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.792ns  (logic 4.103ns (38.014%)  route 6.690ns (61.986%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y99        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[31]/C
+    SLICE_X111Y99        FDCE (Prop_fdce_C_Q)         0.456     0.456 r  mac_inst/accumulator_reg[31]/Q
+                         net (fo=24, routed)          1.332     1.788    mac_inst/accumulator[31]
+    SLICE_X113Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_2/S[2]
+    SLICE_X113Y100       CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.522     2.310 f  mac_inst/plan_input_OBUF[8]_inst_i_2/CO[3]
+                         net (fo=19, routed)          2.857     5.167    mac_inst/plan_input1
+    SLICE_X111Y64                                                     f  mac_inst/activation_OBUF[4]_inst_i_4/I1
+    SLICE_X111Y64        LUT5 (Prop_lut5_I1_O)        0.152     5.319 r  mac_inst/activation_OBUF[4]_inst_i_4/O
+                         net (fo=5, routed)           0.842     6.161    mac_inst/activation_OBUF[4]_inst_i_4_n_0
+    SLICE_X112Y63                                                     r  mac_inst/activation_OBUF[4]_inst_i_1/I2
+    SLICE_X112Y63        LUT6 (Prop_lut6_I2_O)        0.326     6.487 r  mac_inst/activation_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           1.659     8.146    activation_OBUF[4]
+    W16                                                               r  activation_OBUF[4]_inst/I
+    W16                  OBUF (Prop_obuf_I_O)         2.647    10.792 r  activation_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    10.792    activation[4]
+    W16                                                               r  activation[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[3]
+                            (input port)
+  Destination:            mac_inst/accumulator_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.335ns  (logic 4.240ns (41.021%)  route 6.095ns (58.979%))
+  Logic Levels:           12  (CARRY4=7 IBUF=1 LUT3=2 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V20                                               0.000     0.000 r  pixel[3] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[3]
+    V20                                                               r  pixel_IBUF[3]_inst/I
+    V20                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  pixel_IBUF[3]_inst/O
+                         net (fo=19, routed)          2.354     3.361    mac_inst/pixel_IBUF[3]
+    SLICE_X108Y88                                                     r  mac_inst/product__0_carry__0_i_3/I5
+    SLICE_X108Y88        LUT6 (Prop_lut6_I5_O)        0.124     3.485 r  mac_inst/product__0_carry__0_i_3/O
+                         net (fo=2, routed)           0.968     4.453    mac_inst/product__0_carry__0_i_3_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0_i_7/I0
+    SLICE_X110Y88        LUT6 (Prop_lut6_I0_O)        0.124     4.577 r  mac_inst/product__0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     4.577    mac_inst/product__0_carry__0_i_7_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0/S[1]
+    SLICE_X110Y88        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.127 r  mac_inst/product__0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.127    mac_inst/product__0_carry__0_n_0
+    SLICE_X110Y89                                                     r  mac_inst/product__0_carry__1/CI
+    SLICE_X110Y89        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     5.366 r  mac_inst/product__0_carry__1/O[2]
+                         net (fo=3, routed)           0.667     6.033    mac_inst/product__0_carry__1_n_5
+    SLICE_X109Y89                                                     r  mac_inst/product__89_carry__0_i_1/I2
+    SLICE_X109Y89        LUT3 (Prop_lut3_I2_O)        0.302     6.335 r  mac_inst/product__89_carry__0_i_1/O
+                         net (fo=1, routed)           0.546     6.881    mac_inst/product__89_carry__0_i_1_n_0
+    SLICE_X112Y89                                                     r  mac_inst/product__89_carry__0/DI[3]
+    SLICE_X112Y89        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     7.277 r  mac_inst/product__89_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.277    mac_inst/product__89_carry__0_n_0
+    SLICE_X112Y90                                                     r  mac_inst/product__89_carry__1/CI
+    SLICE_X112Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.394 r  mac_inst/product__89_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.394    mac_inst/product__89_carry__1_n_0
+    SLICE_X112Y91                                                     r  mac_inst/product__89_carry__2/CI
+    SLICE_X112Y91        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.613 r  mac_inst/product__89_carry__2/O[0]
+                         net (fo=31, routed)          1.561     9.174    mac_inst/product[16]
+    SLICE_X111Y98                                                     r  mac_inst/accumulator[24]_i_9/I0
+    SLICE_X111Y98        LUT3 (Prop_lut3_I0_O)        0.295     9.469 r  mac_inst/accumulator[24]_i_9/O
+                         net (fo=1, routed)           0.000     9.469    mac_inst/accumulator[24]_i_9_n_0
+    SLICE_X111Y98                                                     r  mac_inst/accumulator_reg[24]_i_1/S[0]
+    SLICE_X111Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.001 r  mac_inst/accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.001    mac_inst/accumulator_reg[24]_i_1_n_0
+    SLICE_X111Y99                                                     r  mac_inst/accumulator_reg[28]_i_1/CI
+    SLICE_X111Y99        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.335 r  mac_inst/accumulator_reg[28]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.335    mac_inst/accumulator_reg[28]_i_1_n_6
+    SLICE_X111Y99        FDCE                                         r  mac_inst/accumulator_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[3]
+                            (input port)
+  Destination:            mac_inst/accumulator_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.314ns  (logic 4.219ns (40.901%)  route 6.095ns (59.099%))
+  Logic Levels:           12  (CARRY4=7 IBUF=1 LUT3=2 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V20                                               0.000     0.000 r  pixel[3] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[3]
+    V20                                                               r  pixel_IBUF[3]_inst/I
+    V20                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  pixel_IBUF[3]_inst/O
+                         net (fo=19, routed)          2.354     3.361    mac_inst/pixel_IBUF[3]
+    SLICE_X108Y88                                                     r  mac_inst/product__0_carry__0_i_3/I5
+    SLICE_X108Y88        LUT6 (Prop_lut6_I5_O)        0.124     3.485 r  mac_inst/product__0_carry__0_i_3/O
+                         net (fo=2, routed)           0.968     4.453    mac_inst/product__0_carry__0_i_3_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0_i_7/I0
+    SLICE_X110Y88        LUT6 (Prop_lut6_I0_O)        0.124     4.577 r  mac_inst/product__0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     4.577    mac_inst/product__0_carry__0_i_7_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0/S[1]
+    SLICE_X110Y88        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.127 r  mac_inst/product__0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.127    mac_inst/product__0_carry__0_n_0
+    SLICE_X110Y89                                                     r  mac_inst/product__0_carry__1/CI
+    SLICE_X110Y89        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     5.366 r  mac_inst/product__0_carry__1/O[2]
+                         net (fo=3, routed)           0.667     6.033    mac_inst/product__0_carry__1_n_5
+    SLICE_X109Y89                                                     r  mac_inst/product__89_carry__0_i_1/I2
+    SLICE_X109Y89        LUT3 (Prop_lut3_I2_O)        0.302     6.335 r  mac_inst/product__89_carry__0_i_1/O
+                         net (fo=1, routed)           0.546     6.881    mac_inst/product__89_carry__0_i_1_n_0
+    SLICE_X112Y89                                                     r  mac_inst/product__89_carry__0/DI[3]
+    SLICE_X112Y89        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     7.277 r  mac_inst/product__89_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.277    mac_inst/product__89_carry__0_n_0
+    SLICE_X112Y90                                                     r  mac_inst/product__89_carry__1/CI
+    SLICE_X112Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.394 r  mac_inst/product__89_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.394    mac_inst/product__89_carry__1_n_0
+    SLICE_X112Y91                                                     r  mac_inst/product__89_carry__2/CI
+    SLICE_X112Y91        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.613 r  mac_inst/product__89_carry__2/O[0]
+                         net (fo=31, routed)          1.561     9.174    mac_inst/product[16]
+    SLICE_X111Y98                                                     r  mac_inst/accumulator[24]_i_9/I0
+    SLICE_X111Y98        LUT3 (Prop_lut3_I0_O)        0.295     9.469 r  mac_inst/accumulator[24]_i_9/O
+                         net (fo=1, routed)           0.000     9.469    mac_inst/accumulator[24]_i_9_n_0
+    SLICE_X111Y98                                                     r  mac_inst/accumulator_reg[24]_i_1/S[0]
+    SLICE_X111Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.001 r  mac_inst/accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.001    mac_inst/accumulator_reg[24]_i_1_n_0
+    SLICE_X111Y99                                                     r  mac_inst/accumulator_reg[28]_i_1/CI
+    SLICE_X111Y99        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.314 r  mac_inst/accumulator_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.314    mac_inst/accumulator_reg[28]_i_1_n_4
+    SLICE_X111Y99        FDCE                                         r  mac_inst/accumulator_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[31]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            plan_input[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.284ns  (logic 3.962ns (38.526%)  route 6.322ns (61.474%))
+  Logic Levels:           4  (CARRY4=1 FDCE=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y99        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[31]/C
+    SLICE_X111Y99        FDCE (Prop_fdce_C_Q)         0.456     0.456 r  mac_inst/accumulator_reg[31]/Q
+                         net (fo=24, routed)          1.332     1.788    mac_inst/accumulator[31]
+    SLICE_X113Y100                                                    r  mac_inst/plan_input_OBUF[8]_inst_i_2/S[2]
+    SLICE_X113Y100       CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.522     2.310 f  mac_inst/plan_input_OBUF[8]_inst_i_2/CO[3]
+                         net (fo=19, routed)          2.925     5.234    mac_inst/plan_input1
+    SLICE_X113Y64                                                     f  mac_inst/plan_input_OBUF[4]_inst_i_1/I0
+    SLICE_X113Y64        LUT3 (Prop_lut3_I0_O)        0.152     5.386 r  mac_inst/plan_input_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           2.065     7.452    plan_input_OBUF[4]
+    N17                                                               r  plan_input_OBUF[4]_inst/I
+    N17                  OBUF (Prop_obuf_I_O)         2.832    10.284 r  plan_input_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    10.284    plan_input[4]
+    N17                                                               r  plan_input[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[3]
+                            (input port)
+  Destination:            mac_inst/accumulator_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.240ns  (logic 4.145ns (40.474%)  route 6.095ns (59.526%))
+  Logic Levels:           12  (CARRY4=7 IBUF=1 LUT3=2 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V20                                               0.000     0.000 r  pixel[3] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[3]
+    V20                                                               r  pixel_IBUF[3]_inst/I
+    V20                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  pixel_IBUF[3]_inst/O
+                         net (fo=19, routed)          2.354     3.361    mac_inst/pixel_IBUF[3]
+    SLICE_X108Y88                                                     r  mac_inst/product__0_carry__0_i_3/I5
+    SLICE_X108Y88        LUT6 (Prop_lut6_I5_O)        0.124     3.485 r  mac_inst/product__0_carry__0_i_3/O
+                         net (fo=2, routed)           0.968     4.453    mac_inst/product__0_carry__0_i_3_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0_i_7/I0
+    SLICE_X110Y88        LUT6 (Prop_lut6_I0_O)        0.124     4.577 r  mac_inst/product__0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     4.577    mac_inst/product__0_carry__0_i_7_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0/S[1]
+    SLICE_X110Y88        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.127 r  mac_inst/product__0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.127    mac_inst/product__0_carry__0_n_0
+    SLICE_X110Y89                                                     r  mac_inst/product__0_carry__1/CI
+    SLICE_X110Y89        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     5.366 r  mac_inst/product__0_carry__1/O[2]
+                         net (fo=3, routed)           0.667     6.033    mac_inst/product__0_carry__1_n_5
+    SLICE_X109Y89                                                     r  mac_inst/product__89_carry__0_i_1/I2
+    SLICE_X109Y89        LUT3 (Prop_lut3_I2_O)        0.302     6.335 r  mac_inst/product__89_carry__0_i_1/O
+                         net (fo=1, routed)           0.546     6.881    mac_inst/product__89_carry__0_i_1_n_0
+    SLICE_X112Y89                                                     r  mac_inst/product__89_carry__0/DI[3]
+    SLICE_X112Y89        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     7.277 r  mac_inst/product__89_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.277    mac_inst/product__89_carry__0_n_0
+    SLICE_X112Y90                                                     r  mac_inst/product__89_carry__1/CI
+    SLICE_X112Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.394 r  mac_inst/product__89_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.394    mac_inst/product__89_carry__1_n_0
+    SLICE_X112Y91                                                     r  mac_inst/product__89_carry__2/CI
+    SLICE_X112Y91        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.613 r  mac_inst/product__89_carry__2/O[0]
+                         net (fo=31, routed)          1.561     9.174    mac_inst/product[16]
+    SLICE_X111Y98                                                     r  mac_inst/accumulator[24]_i_9/I0
+    SLICE_X111Y98        LUT3 (Prop_lut3_I0_O)        0.295     9.469 r  mac_inst/accumulator[24]_i_9/O
+                         net (fo=1, routed)           0.000     9.469    mac_inst/accumulator[24]_i_9_n_0
+    SLICE_X111Y98                                                     r  mac_inst/accumulator_reg[24]_i_1/S[0]
+    SLICE_X111Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.001 r  mac_inst/accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.001    mac_inst/accumulator_reg[24]_i_1_n_0
+    SLICE_X111Y99                                                     r  mac_inst/accumulator_reg[28]_i_1/CI
+    SLICE_X111Y99        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.240 r  mac_inst/accumulator_reg[28]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.240    mac_inst/accumulator_reg[28]_i_1_n_5
+    SLICE_X111Y99        FDCE                                         r  mac_inst/accumulator_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[3]
+                            (input port)
+  Destination:            mac_inst/accumulator_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.224ns  (logic 4.129ns (40.381%)  route 6.095ns (59.619%))
+  Logic Levels:           12  (CARRY4=7 IBUF=1 LUT3=2 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V20                                               0.000     0.000 r  pixel[3] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[3]
+    V20                                                               r  pixel_IBUF[3]_inst/I
+    V20                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  pixel_IBUF[3]_inst/O
+                         net (fo=19, routed)          2.354     3.361    mac_inst/pixel_IBUF[3]
+    SLICE_X108Y88                                                     r  mac_inst/product__0_carry__0_i_3/I5
+    SLICE_X108Y88        LUT6 (Prop_lut6_I5_O)        0.124     3.485 r  mac_inst/product__0_carry__0_i_3/O
+                         net (fo=2, routed)           0.968     4.453    mac_inst/product__0_carry__0_i_3_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0_i_7/I0
+    SLICE_X110Y88        LUT6 (Prop_lut6_I0_O)        0.124     4.577 r  mac_inst/product__0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     4.577    mac_inst/product__0_carry__0_i_7_n_0
+    SLICE_X110Y88                                                     r  mac_inst/product__0_carry__0/S[1]
+    SLICE_X110Y88        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.127 r  mac_inst/product__0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.127    mac_inst/product__0_carry__0_n_0
+    SLICE_X110Y89                                                     r  mac_inst/product__0_carry__1/CI
+    SLICE_X110Y89        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     5.366 r  mac_inst/product__0_carry__1/O[2]
+                         net (fo=3, routed)           0.667     6.033    mac_inst/product__0_carry__1_n_5
+    SLICE_X109Y89                                                     r  mac_inst/product__89_carry__0_i_1/I2
+    SLICE_X109Y89        LUT3 (Prop_lut3_I2_O)        0.302     6.335 r  mac_inst/product__89_carry__0_i_1/O
+                         net (fo=1, routed)           0.546     6.881    mac_inst/product__89_carry__0_i_1_n_0
+    SLICE_X112Y89                                                     r  mac_inst/product__89_carry__0/DI[3]
+    SLICE_X112Y89        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     7.277 r  mac_inst/product__89_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.277    mac_inst/product__89_carry__0_n_0
+    SLICE_X112Y90                                                     r  mac_inst/product__89_carry__1/CI
+    SLICE_X112Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.394 r  mac_inst/product__89_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.394    mac_inst/product__89_carry__1_n_0
+    SLICE_X112Y91                                                     r  mac_inst/product__89_carry__2/CI
+    SLICE_X112Y91        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.613 r  mac_inst/product__89_carry__2/O[0]
+                         net (fo=31, routed)          1.561     9.174    mac_inst/product[16]
+    SLICE_X111Y98                                                     r  mac_inst/accumulator[24]_i_9/I0
+    SLICE_X111Y98        LUT3 (Prop_lut3_I0_O)        0.295     9.469 r  mac_inst/accumulator[24]_i_9/O
+                         net (fo=1, routed)           0.000     9.469    mac_inst/accumulator[24]_i_9_n_0
+    SLICE_X111Y98                                                     r  mac_inst/accumulator_reg[24]_i_1/S[0]
+    SLICE_X111Y98        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.001 r  mac_inst/accumulator_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.001    mac_inst/accumulator_reg[24]_i_1_n_0
+    SLICE_X111Y99                                                     r  mac_inst/accumulator_reg[28]_i_1/CI
+    SLICE_X111Y99        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.224 r  mac_inst/accumulator_reg[28]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.224    mac_inst/accumulator_reg[28]_i_1_n_7
+    SLICE_X111Y99        FDCE                                         r  mac_inst/accumulator_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[22]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[22]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.407ns  (logic 0.252ns (61.981%)  route 0.155ns (38.019%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y97        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[22]/C
+    SLICE_X111Y97        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[22]/Q
+                         net (fo=6, routed)           0.155     0.296    mac_inst/accumulator[22]
+    SLICE_X111Y97                                                     r  mac_inst/accumulator[20]_i_7/I2
+    SLICE_X111Y97        LUT3 (Prop_lut3_I2_O)        0.045     0.341 r  mac_inst/accumulator[20]_i_7/O
+                         net (fo=1, routed)           0.000     0.341    mac_inst/accumulator[20]_i_7_n_0
+    SLICE_X111Y97                                                     r  mac_inst/accumulator_reg[20]_i_1/S[2]
+    SLICE_X111Y97        CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.066     0.407 r  mac_inst/accumulator_reg[20]_i_1/O[2]
+                         net (fo=1, routed)           0.000     0.407    mac_inst/accumulator_reg[20]_i_1_n_5
+    SLICE_X111Y97        FDCE                                         r  mac_inst/accumulator_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[23]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[23]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.419ns  (logic 0.249ns (59.393%)  route 0.170ns (40.607%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y97        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[23]/C
+    SLICE_X111Y97        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[23]/Q
+                         net (fo=6, routed)           0.170     0.311    mac_inst/accumulator[23]
+    SLICE_X111Y97                                                     r  mac_inst/accumulator[20]_i_6/I2
+    SLICE_X111Y97        LUT3 (Prop_lut3_I2_O)        0.045     0.356 r  mac_inst/accumulator[20]_i_6/O
+                         net (fo=1, routed)           0.000     0.356    mac_inst/accumulator[20]_i_6_n_0
+    SLICE_X111Y97                                                     r  mac_inst/accumulator_reg[20]_i_1/S[3]
+    SLICE_X111Y97        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.419 r  mac_inst/accumulator_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.419    mac_inst/accumulator_reg[20]_i_1_n_4
+    SLICE_X111Y97        FDCE                                         r  mac_inst/accumulator_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.421ns  (logic 0.249ns (59.195%)  route 0.172ns (40.805%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y93        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[7]/C
+    SLICE_X111Y93        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[7]/Q
+                         net (fo=2, routed)           0.172     0.313    mac_inst/accumulator[7]
+    SLICE_X111Y93                                                     r  mac_inst/accumulator[4]_i_6/I2
+    SLICE_X111Y93        LUT3 (Prop_lut3_I2_O)        0.045     0.358 r  mac_inst/accumulator[4]_i_6/O
+                         net (fo=1, routed)           0.000     0.358    mac_inst/accumulator[4]_i_6_n_0
+    SLICE_X111Y93                                                     r  mac_inst/accumulator_reg[4]_i_1/S[3]
+    SLICE_X111Y93        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.421 r  mac_inst/accumulator_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.421    mac_inst/accumulator_reg[4]_i_1_n_4
+    SLICE_X111Y93        FDCE                                         r  mac_inst/accumulator_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.421ns  (logic 0.249ns (59.079%)  route 0.172ns (40.921%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y92        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[3]/C
+    SLICE_X111Y92        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[3]/Q
+                         net (fo=2, routed)           0.172     0.313    mac_inst/accumulator[3]
+    SLICE_X111Y92                                                     r  mac_inst/accumulator[0]_i_8/I3
+    SLICE_X111Y92        LUT4 (Prop_lut4_I3_O)        0.045     0.358 r  mac_inst/accumulator[0]_i_8/O
+                         net (fo=1, routed)           0.000     0.358    mac_inst/accumulator[0]_i_8_n_0
+    SLICE_X111Y92                                                     r  mac_inst/accumulator_reg[0]_i_2/S[3]
+    SLICE_X111Y92        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.421 r  mac_inst/accumulator_reg[0]_i_2/O[3]
+                         net (fo=1, routed)           0.000     0.421    mac_inst/accumulator_reg[0]_i_2_n_4
+    SLICE_X111Y92        FDCE                                         r  mac_inst/accumulator_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[24]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[24]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.424ns  (logic 0.256ns (60.343%)  route 0.168ns (39.657%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y98        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[24]/C
+    SLICE_X111Y98        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[24]/Q
+                         net (fo=6, routed)           0.168     0.309    mac_inst/accumulator[24]
+    SLICE_X111Y98                                                     r  mac_inst/accumulator[24]_i_9/I2
+    SLICE_X111Y98        LUT3 (Prop_lut3_I2_O)        0.045     0.354 r  mac_inst/accumulator[24]_i_9/O
+                         net (fo=1, routed)           0.000     0.354    mac_inst/accumulator[24]_i_9_n_0
+    SLICE_X111Y98                                                     r  mac_inst/accumulator_reg[24]_i_1/S[0]
+    SLICE_X111Y98        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.424 r  mac_inst/accumulator_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.424    mac_inst/accumulator_reg[24]_i_1_n_7
+    SLICE_X111Y98        FDCE                                         r  mac_inst/accumulator_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.426ns  (logic 0.256ns (60.028%)  route 0.170ns (39.972%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y92        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[0]/C
+    SLICE_X111Y92        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[0]/Q
+                         net (fo=2, routed)           0.170     0.311    mac_inst/accumulator[0]
+    SLICE_X111Y92                                                     r  mac_inst/accumulator[0]_i_11/I2
+    SLICE_X111Y92        LUT3 (Prop_lut3_I2_O)        0.045     0.356 r  mac_inst/accumulator[0]_i_11/O
+                         net (fo=1, routed)           0.000     0.356    mac_inst/accumulator[0]_i_11_n_0
+    SLICE_X111Y92                                                     r  mac_inst/accumulator_reg[0]_i_2/S[0]
+    SLICE_X111Y92        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.426 r  mac_inst/accumulator_reg[0]_i_2/O[0]
+                         net (fo=1, routed)           0.000     0.426    mac_inst/accumulator_reg[0]_i_2_n_7
+    SLICE_X111Y92        FDCE                                         r  mac_inst/accumulator_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.426ns  (logic 0.256ns (60.028%)  route 0.170ns (39.972%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y93        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[4]/C
+    SLICE_X111Y93        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[4]/Q
+                         net (fo=2, routed)           0.170     0.311    mac_inst/accumulator[4]
+    SLICE_X111Y93                                                     r  mac_inst/accumulator[4]_i_9/I2
+    SLICE_X111Y93        LUT3 (Prop_lut3_I2_O)        0.045     0.356 r  mac_inst/accumulator[4]_i_9/O
+                         net (fo=1, routed)           0.000     0.356    mac_inst/accumulator[4]_i_9_n_0
+    SLICE_X111Y93                                                     r  mac_inst/accumulator_reg[4]_i_1/S[0]
+    SLICE_X111Y93        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.426 r  mac_inst/accumulator_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.426    mac_inst/accumulator_reg[4]_i_1_n_7
+    SLICE_X111Y93        FDCE                                         r  mac_inst/accumulator_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[8]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.426ns  (logic 0.256ns (60.028%)  route 0.170ns (39.972%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y94        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[8]/C
+    SLICE_X111Y94        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[8]/Q
+                         net (fo=2, routed)           0.170     0.311    mac_inst/accumulator[8]
+    SLICE_X111Y94                                                     r  mac_inst/accumulator[8]_i_9/I2
+    SLICE_X111Y94        LUT3 (Prop_lut3_I2_O)        0.045     0.356 r  mac_inst/accumulator[8]_i_9/O
+                         net (fo=1, routed)           0.000     0.356    mac_inst/accumulator[8]_i_9_n_0
+    SLICE_X111Y94                                                     r  mac_inst/accumulator_reg[8]_i_1/S[0]
+    SLICE_X111Y94        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.426 r  mac_inst/accumulator_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.426    mac_inst/accumulator_reg[8]_i_1_n_7
+    SLICE_X111Y94        FDCE                                         r  mac_inst/accumulator_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[31]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.431ns  (logic 0.249ns (57.723%)  route 0.182ns (42.277%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y99        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[31]/C
+    SLICE_X111Y99        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[31]/Q
+                         net (fo=24, routed)          0.182     0.323    mac_inst/accumulator[31]
+    SLICE_X111Y99                                                     r  mac_inst/accumulator[28]_i_5/I0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I0_O)        0.045     0.368 r  mac_inst/accumulator[28]_i_5/O
+                         net (fo=1, routed)           0.000     0.368    mac_inst/accumulator[28]_i_5_n_0
+    SLICE_X111Y99                                                     r  mac_inst/accumulator_reg[28]_i_1/S[3]
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.431 r  mac_inst/accumulator_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.431    mac_inst/accumulator_reg[28]_i_1_n_4
+    SLICE_X111Y99        FDCE                                         r  mac_inst/accumulator_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mac_inst/accumulator_reg[19]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            mac_inst/accumulator_reg[19]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.434ns  (logic 0.249ns (57.426%)  route 0.185ns (42.574%))
+  Logic Levels:           3  (CARRY4=1 FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y96        FDCE                         0.000     0.000 r  mac_inst/accumulator_reg[19]/C
+    SLICE_X111Y96        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  mac_inst/accumulator_reg[19]/Q
+                         net (fo=6, routed)           0.185     0.326    mac_inst/accumulator[19]
+    SLICE_X111Y96                                                     r  mac_inst/accumulator[16]_i_6/I2
+    SLICE_X111Y96        LUT3 (Prop_lut3_I2_O)        0.045     0.371 r  mac_inst/accumulator[16]_i_6/O
+                         net (fo=1, routed)           0.000     0.371    mac_inst/accumulator[16]_i_6_n_0
+    SLICE_X111Y96                                                     r  mac_inst/accumulator_reg[16]_i_1/S[3]
+    SLICE_X111Y96        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.434 r  mac_inst/accumulator_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.434    mac_inst/accumulator_reg[16]_i_1_n_4
+    SLICE_X111Y96        FDCE                                         r  mac_inst/accumulator_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
