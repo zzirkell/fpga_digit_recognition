@@ -1,0 +1,511 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri Sep 11 00:08:20 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing -delay_type min_max -max_paths 10 -sort_by group -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_training_controller.txt
+| Design       : training_controller
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 forward_count_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            forward_count_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.392ns  (logic 0.245ns (62.482%)  route 0.147ns (37.518%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  forward_count_reg[2]/Q
+                         net (fo=8, unplaced)         0.147     0.294    forward_count_reg_n_0_[2]
+                                                                      r  forward_count[3]_i_1/I4
+                         LUT5 (Prop_lut5_I4_O)        0.098     0.392 r  forward_count[3]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.392    forward_count[3]_i_1_n_0
+                         FDCE                                         r  forward_count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 update_count_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            update_count_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.392ns  (logic 0.245ns (62.482%)  route 0.147ns (37.518%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  update_count_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  update_count_reg[2]/Q
+                         net (fo=8, unplaced)         0.147     0.294    update_count_reg_n_0_[2]
+                                                                      r  update_count[3]_i_1/I5
+                         LUT6 (Prop_lut6_I5_O)        0.098     0.392 r  update_count[3]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.392    update_count[3]_i_1_n_0
+                         FDCE                                         r  update_count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            forward_count_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.396ns  (logic 0.245ns (61.818%)  route 0.151ns (38.182%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 f  forward_count_reg[0]/Q
+                         net (fo=12, unplaced)        0.151     0.298    forward_count_reg_n_0_[0]
+                                                                      f  forward_count[0]_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.098     0.396 r  forward_count[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.396    forward_count[0]_i_1_n_0
+                         FDCE                                         r  forward_count_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 update_count_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            update_count_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.399ns  (logic 0.248ns (62.105%)  route 0.151ns (37.895%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  update_count_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 f  update_count_reg[0]/Q
+                         net (fo=12, unplaced)        0.151     0.298    update_count_reg_n_0_[0]
+                                                                      f  update_count[0]_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.101     0.399 r  update_count[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.399    update_count[0]_i_1_n_0
+                         FDCE                                         r  update_count_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FSM_sequential_state_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.402ns  (logic 0.245ns (60.975%)  route 0.157ns (39.025%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 f  FSM_sequential_state_reg[0]/Q
+                         net (fo=21, unplaced)        0.157     0.304    state__0[0]
+                                                                      f  FSM_sequential_state[0]_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.402 r  FSM_sequential_state[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.402    state__1[0]
+                         FDCE                                         r  FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FSM_sequential_state_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.405ns  (logic 0.245ns (60.467%)  route 0.160ns (39.533%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 f  FSM_sequential_state_reg[2]/Q
+                         net (fo=29, unplaced)        0.160     0.307    state__0[2]
+                                                                      f  FSM_sequential_state[1]_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.405 r  FSM_sequential_state[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.405    state__1[1]
+                         FDCE                                         r  FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            update_count_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.405ns  (logic 0.245ns (60.467%)  route 0.160ns (39.533%))
+  Logic Levels:           2  (FDCE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  FSM_sequential_state_reg[2]/Q
+                         net (fo=29, unplaced)        0.160     0.307    state__0[2]
+                                                                      r  update_count[1]_i_1/I3
+                         LUT4 (Prop_lut4_I3_O)        0.098     0.405 r  update_count[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.405    update_count[1]_i_1_n_0
+                         FDCE                                         r  update_count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FSM_sequential_state_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.407ns  (logic 0.245ns (60.154%)  route 0.162ns (39.846%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.162     0.309    state__0[1]
+                                                                      r  FSM_sequential_state[2]_i_2/I2
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.407 r  FSM_sequential_state[2]_i_2/O
+                         net (fo=1, unplaced)         0.000     0.407    state__1[2]
+                         FDCE                                         r  FSM_sequential_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            forward_count_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.407ns  (logic 0.245ns (60.154%)  route 0.162ns (39.846%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.162     0.309    state__0[1]
+                                                                      r  forward_count[1]_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.407 r  forward_count[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.407    forward_count[1]_i_1_n_0
+                         FDCE                                         r  forward_count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            update_count_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.408ns  (logic 0.248ns (60.758%)  route 0.160ns (39.242%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.147     0.147 r  FSM_sequential_state_reg[2]/Q
+                         net (fo=29, unplaced)        0.160     0.307    state__0[2]
+                                                                      r  update_count[2]_i_1/I4
+                         LUT5 (Prop_lut5_I4_O)        0.101     0.408 r  update_count[2]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.408    update_count[2]_i_1_n_0
+                         FDCE                                         r  update_count_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.136ns  (logic 3.655ns (51.224%)  route 3.481ns (48.776%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 f  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.815     1.293    state__0[1]
+                                                                      f  weight_write_enable_OBUF_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.588 r  weight_write_enable_OBUF_inst_i_1/O
+                         net (fo=8, unplaced)         0.940     2.528    weight_write_enable_OBUF
+                                                                      r  read_address_OBUF[7]_inst_i_2/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     2.652 r  read_address_OBUF[7]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     3.578    read_address_OBUF[7]_inst_i_2_n_0
+                                                                      r  read_address_OBUF[7]_inst_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.702 r  read_address_OBUF[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.502    read_address_OBUF[7]
+                                                                      r  read_address_OBUF[7]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     7.136 r  read_address_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     7.136    read_address[7]
+                                                                      r  read_address[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.679ns  (logic 3.671ns (54.969%)  route 3.008ns (45.031%))
+  Logic Levels:           5  (FDCE=1 LUT4=2 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[1]/Q
+                         net (fo=10, unplaced)        0.784     1.262    forward_count_reg_n_0_[1]
+                                                                      r  read_address_OBUF[4]_inst_i_2/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     1.581 f  read_address_OBUF[4]_inst_i_2/O
+                         net (fo=9, unplaced)         0.490     2.071    read_address_OBUF[4]_inst_i_2_n_0
+                                                                      f  read_address_OBUF[9]_inst_i_3/I1
+                         LUT4 (Prop_lut4_I1_O)        0.116     2.187 f  read_address_OBUF[9]_inst_i_3/O
+                         net (fo=6, unplaced)         0.934     3.121    read_address1
+                                                                      f  read_address_OBUF[8]_inst_i_1/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.245 r  read_address_OBUF[8]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.045    read_address_OBUF[8]
+                                                                      r  read_address_OBUF[8]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.679 r  read_address_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     6.679    read_address[8]
+                                                                      r  read_address[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.679ns  (logic 3.671ns (54.969%)  route 3.008ns (45.031%))
+  Logic Levels:           5  (FDCE=1 LUT4=2 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[1]/Q
+                         net (fo=10, unplaced)        0.784     1.262    forward_count_reg_n_0_[1]
+                                                                      r  read_address_OBUF[4]_inst_i_2/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     1.581 f  read_address_OBUF[4]_inst_i_2/O
+                         net (fo=9, unplaced)         0.490     2.071    read_address_OBUF[4]_inst_i_2_n_0
+                                                                      f  read_address_OBUF[9]_inst_i_3/I1
+                         LUT4 (Prop_lut4_I1_O)        0.116     2.187 f  read_address_OBUF[9]_inst_i_3/O
+                         net (fo=6, unplaced)         0.934     3.121    read_address1
+                                                                      f  read_address_OBUF[9]_inst_i_1/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.245 r  read_address_OBUF[9]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.045    read_address_OBUF[9]
+                                                                      r  read_address_OBUF[9]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.679 r  read_address_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     6.679    read_address[9]
+                                                                      r  read_address[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.653ns  (logic 3.655ns (54.943%)  route 2.998ns (45.057%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 f  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.815     1.293    state__0[1]
+                                                                      f  weight_write_enable_OBUF_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.588 r  weight_write_enable_OBUF_inst_i_1/O
+                         net (fo=8, unplaced)         0.940     2.528    weight_write_enable_OBUF
+                                                                      r  read_address_OBUF[7]_inst_i_2/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     2.652 r  read_address_OBUF[7]_inst_i_2/O
+                         net (fo=4, unplaced)         0.443     3.095    read_address_OBUF[7]_inst_i_2_n_0
+                                                                      r  read_address_OBUF[4]_inst_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.219 r  read_address_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.019    read_address_OBUF[4]
+                                                                      r  read_address_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.653 r  read_address_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     6.653    read_address[4]
+                                                                      r  read_address[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.653ns  (logic 3.655ns (54.943%)  route 2.998ns (45.057%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 f  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.815     1.293    state__0[1]
+                                                                      f  weight_write_enable_OBUF_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.588 r  weight_write_enable_OBUF_inst_i_1/O
+                         net (fo=8, unplaced)         0.940     2.528    weight_write_enable_OBUF
+                                                                      r  read_address_OBUF[7]_inst_i_2/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     2.652 r  read_address_OBUF[7]_inst_i_2/O
+                         net (fo=4, unplaced)         0.443     3.095    read_address_OBUF[7]_inst_i_2_n_0
+                                                                      r  read_address_OBUF[5]_inst_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.219 r  read_address_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.019    read_address_OBUF[5]
+                                                                      r  read_address_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.653 r  read_address_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     6.653    read_address[5]
+                                                                      r  read_address[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.653ns  (logic 3.655ns (54.943%)  route 2.998ns (45.057%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  FSM_sequential_state_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 f  FSM_sequential_state_reg[1]/Q
+                         net (fo=36, unplaced)        0.815     1.293    state__0[1]
+                                                                      f  weight_write_enable_OBUF_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.588 r  weight_write_enable_OBUF_inst_i_1/O
+                         net (fo=8, unplaced)         0.940     2.528    weight_write_enable_OBUF
+                                                                      r  read_address_OBUF[7]_inst_i_2/I0
+                         LUT5 (Prop_lut5_I0_O)        0.124     2.652 r  read_address_OBUF[7]_inst_i_2/O
+                         net (fo=4, unplaced)         0.443     3.095    read_address_OBUF[7]_inst_i_2_n_0
+                                                                      r  read_address_OBUF[6]_inst_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.219 r  read_address_OBUF[6]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.019    read_address_OBUF[6]
+                                                                      r  read_address_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.653 r  read_address_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     6.653    read_address[6]
+                                                                      r  read_address[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.250ns  (logic 3.555ns (56.886%)  route 2.695ns (43.114%))
+  Logic Levels:           4  (FDCE=1 LUT4=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[1]/Q
+                         net (fo=10, unplaced)        0.784     1.262    forward_count_reg_n_0_[1]
+                                                                      r  read_address_OBUF[3]_inst_i_2/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     1.581 r  read_address_OBUF[3]_inst_i_2/O
+                         net (fo=1, unplaced)         1.111     2.692    in6[3]
+                                                                      r  read_address_OBUF[3]_inst_i_1/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     2.816 r  read_address_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     3.616    read_address_OBUF[3]
+                                                                      r  read_address_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.250 r  read_address_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     6.250    read_address[3]
+                                                                      r  read_address[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.231ns  (logic 3.531ns (56.674%)  route 2.700ns (43.326%))
+  Logic Levels:           4  (FDCE=1 LUT3=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[0]/Q
+                         net (fo=12, unplaced)        0.789     1.267    forward_count_reg_n_0_[0]
+                                                                      r  read_address_OBUF[2]_inst_i_2/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.562 r  read_address_OBUF[2]_inst_i_2/O
+                         net (fo=1, unplaced)         1.111     2.673    read_address_OBUF[2]_inst_i_2_n_0
+                                                                      r  read_address_OBUF[2]_inst_i_1/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     2.797 r  read_address_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     3.597    read_address_OBUF[2]
+                                                                      r  read_address_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.231 r  read_address_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     6.231    read_address[2]
+                                                                      r  read_address[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.226ns  (logic 3.671ns (58.968%)  route 2.555ns (41.032%))
+  Logic Levels:           5  (FDCE=1 LUT4=2 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[1]/Q
+                         net (fo=10, unplaced)        0.784     1.262    forward_count_reg_n_0_[1]
+                                                                      r  read_address_OBUF[4]_inst_i_2/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     1.581 f  read_address_OBUF[4]_inst_i_2/O
+                         net (fo=9, unplaced)         0.490     2.071    read_address_OBUF[4]_inst_i_2_n_0
+                                                                      f  read_address_OBUF[9]_inst_i_3/I1
+                         LUT4 (Prop_lut4_I1_O)        0.116     2.187 f  read_address_OBUF[9]_inst_i_3/O
+                         net (fo=6, unplaced)         0.481     2.668    read_address1
+                                                                      f  read_address_OBUF[0]_inst_i_1/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.792 r  read_address_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     3.592    read_address_OBUF[0]
+                                                                      r  read_address_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.226 r  read_address_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     6.226    read_address[0]
+                                                                      r  read_address[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 forward_count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            read_address[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.226ns  (logic 3.671ns (58.968%)  route 2.555ns (41.032%))
+  Logic Levels:           5  (FDCE=1 LUT4=2 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  forward_count_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.478     0.478 r  forward_count_reg[1]/Q
+                         net (fo=10, unplaced)        0.784     1.262    forward_count_reg_n_0_[1]
+                                                                      r  read_address_OBUF[4]_inst_i_2/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     1.581 f  read_address_OBUF[4]_inst_i_2/O
+                         net (fo=9, unplaced)         0.490     2.071    read_address_OBUF[4]_inst_i_2_n_0
+                                                                      f  read_address_OBUF[9]_inst_i_3/I1
+                         LUT4 (Prop_lut4_I1_O)        0.116     2.187 f  read_address_OBUF[9]_inst_i_3/O
+                         net (fo=6, unplaced)         0.481     2.668    read_address1
+                                                                      f  read_address_OBUF[1]_inst_i_1/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.792 r  read_address_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     3.592    read_address_OBUF[1]
+                                                                      r  read_address_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634     6.226 r  read_address_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     6.226    read_address[1]
+                                                                      r  read_address[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

@@ -1,0 +1,1042 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Sep 10 23:53:48 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_weight_update.txt
+| Design       : weight_update
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   49          inf        0.000                      0                   49           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            49 Endpoints
+Min Delay            49 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.943ns  (logic 11.861ns (70.006%)  route 5.082ns (29.994%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[0]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.332    13.509 r  new_weight_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.309    new_weight_OBUF[0]
+                                                                      r  new_weight_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.943 r  new_weight_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    16.943    new_weight[0]
+                                                                      r  new_weight[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.943ns  (logic 11.861ns (70.006%)  route 5.082ns (29.994%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[2]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.332    13.509 r  new_weight_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.309    new_weight_OBUF[2]
+                                                                      r  new_weight_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.943 r  new_weight_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    16.943    new_weight[2]
+                                                                      r  new_weight[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.943ns  (logic 11.861ns (70.006%)  route 5.082ns (29.994%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[4]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.332    13.509 r  new_weight_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.309    new_weight_OBUF[4]
+                                                                      r  new_weight_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.943 r  new_weight_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    16.943    new_weight[4]
+                                                                      r  new_weight[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.943ns  (logic 11.861ns (70.006%)  route 5.082ns (29.994%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[6]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.332    13.509 r  new_weight_OBUF[6]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.309    new_weight_OBUF[6]
+                                                                      r  new_weight_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.943 r  new_weight_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    16.943    new_weight[6]
+                                                                      r  new_weight[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.935ns  (logic 11.853ns (69.992%)  route 5.082ns (30.008%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.324    13.501 r  new_weight_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.301    new_weight_OBUF[1]
+                                                                      r  new_weight_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.935 r  new_weight_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    16.935    new_weight[1]
+                                                                      r  new_weight[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.935ns  (logic 11.853ns (69.992%)  route 5.082ns (30.008%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[3]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.324    13.501 r  new_weight_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.301    new_weight_OBUF[3]
+                                                                      r  new_weight_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.935 r  new_weight_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    16.935    new_weight[3]
+                                                                      r  new_weight[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.935ns  (logic 11.853ns (69.992%)  route 5.082ns (30.008%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 r  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      r  new_weight_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.324    13.501 r  new_weight_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.301    new_weight_OBUF[5]
+                                                                      r  new_weight_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.935 r  new_weight_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    16.935    new_weight[5]
+                                                                      r  new_weight[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            new_weight[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.935ns  (logic 11.853ns (69.992%)  route 5.082ns (30.008%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=2 IBUF=1 LUT3=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 f  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      f  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 r  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_14/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  new_weight_OBUF[7]_inst_i_14/O
+                         net (fo=1, unplaced)         0.000    10.042    new_weight_OBUF[7]_inst_i_14_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.575 r  new_weight_OBUF[7]_inst_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    10.575    new_weight_OBUF[7]_inst_i_4_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    10.856 r  new_weight_OBUF[7]_inst_i_6/CO[0]
+                         net (fo=18, unplaced)        1.040    11.896    new_weight_OBUF[7]_inst_i_6_n_3
+                                                                      r  new_weight_OBUF[7]_inst_i_9/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    12.639 r  new_weight_OBUF[7]_inst_i_9/CO[3]
+                         net (fo=1, unplaced)         0.009    12.648    new_weight_OBUF[7]_inst_i_9_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    12.827 f  new_weight_OBUF[7]_inst_i_3/CO[1]
+                         net (fo=8, unplaced)         0.350    13.177    new_weight10_in
+                                                                      f  new_weight_OBUF[7]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.324    13.501 r  new_weight_OBUF[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    14.301    new_weight_OBUF[7]
+                                                                      r  new_weight_OBUF[7]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    16.935 r  new_weight_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    16.935    new_weight[7]
+                                                                      r  new_weight[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            delta_weight[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.476ns  (logic 9.793ns (72.671%)  route 3.683ns (27.329%))
+  Logic Levels:           6  (DSP48E1=2 IBUF=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 r  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      r  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 f  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      f  delta_weight_OBUF[15]_inst_i_1/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  delta_weight_OBUF[15]_inst_i_1/O
+                         net (fo=9, unplaced)         0.800    10.842    delta_weight_OBUF[7]
+                                                                      r  delta_weight_OBUF[10]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    13.476 r  delta_weight_OBUF[10]_inst/O
+                         net (fo=0)                   0.000    13.476    delta_weight[10]
+                                                                      r  delta_weight[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 correction[15]
+                            (input port)
+  Destination:            delta_weight[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.476ns  (logic 9.793ns (72.671%)  route 3.683ns (27.329%))
+  Logic Levels:           6  (DSP48E1=2 IBUF=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  correction[15] (IN)
+                         net (fo=0)                   0.000     0.000    correction[15]
+                                                                      r  correction_IBUF[15]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  correction_IBUF[15]_inst/O
+                         net (fo=30, unplaced)        0.800     1.771    correction_IBUF[15]
+                                                                      r  raw_delta__0/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      3.841     5.612 r  raw_delta__0/P[24]
+                         net (fo=17, unplaced)        0.800     6.412    raw_delta_OBUF[24]
+                                                                      r  raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[22])
+                                                      2.098     8.510 r  raw_magnitude/P[22]
+                         net (fo=2, unplaced)         0.800     9.310    raw_magnitude_n_83
+                                                                      r  delta_weight_OBUF[15]_inst_i_2/I4
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.434 f  delta_weight_OBUF[15]_inst_i_2/O
+                         net (fo=7, unplaced)         0.484     9.918    delta_weight_OBUF[15]_inst_i_2_n_0
+                                                                      f  delta_weight_OBUF[15]_inst_i_1/I2
+                         LUT4 (Prop_lut4_I2_O)        0.124    10.042 r  delta_weight_OBUF[15]_inst_i_1/O
+                         net (fo=9, unplaced)         0.800    10.842    delta_weight_OBUF[7]
+                                                                      r  delta_weight_OBUF[11]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    13.476 r  delta_weight_OBUF[11]_inst/O
+                         net (fo=0)                   0.000    13.476    delta_weight[11]
+                                                                      r  delta_weight[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 old_weight[0]
+                            (input port)
+  Destination:            new_weight[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.476ns  (logic 1.550ns (62.579%)  route 0.927ns (37.421%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[0]
+                                                                      r  old_weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[0]
+                                                                      r  new_weight_OBUF[3]_inst_i_2/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  new_weight_OBUF[3]_inst_i_2/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    updated_sum[1]
+                                                                      r  new_weight_OBUF[1]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.106     0.988 r  new_weight_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.325    new_weight_OBUF[1]
+                                                                      r  new_weight_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.476 r  new_weight_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.476    new_weight[1]
+                                                                      r  new_weight[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight[4]
+                            (input port)
+  Destination:            new_weight[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.476ns  (logic 1.550ns (62.579%)  route 0.927ns (37.421%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[4]
+                                                                      r  old_weight_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[4]
+                                                                      r  new_weight_OBUF[7]_inst_i_4/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  new_weight_OBUF[7]_inst_i_4/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    updated_sum[5]
+                                                                      r  new_weight_OBUF[5]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.106     0.988 r  new_weight_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.325    new_weight_OBUF[5]
+                                                                      r  new_weight_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.476 r  new_weight_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.476    new_weight[5]
+                                                                      r  new_weight[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight[2]
+                            (input port)
+  Destination:            new_weight[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.480ns  (logic 1.553ns (62.614%)  route 0.927ns (37.386%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[2] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[2]
+                                                                      r  old_weight_IBUF[2]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[2]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[2]
+                                                                      r  new_weight_OBUF[3]_inst_i_2/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_O[3])
+                                                      0.092     0.630 r  new_weight_OBUF[3]_inst_i_2/O[3]
+                         net (fo=1, unplaced)         0.253     0.882    updated_sum[3]
+                                                                      r  new_weight_OBUF[3]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.109     0.991 r  new_weight_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.329    new_weight_OBUF[3]
+                                                                      r  new_weight_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.480 r  new_weight_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.480    new_weight[3]
+                                                                      r  new_weight[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight[6]
+                            (input port)
+  Destination:            new_weight[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.492ns  (logic 1.553ns (62.317%)  route 0.939ns (37.683%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[6] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[6]
+                                                                      r  old_weight_IBUF[6]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[6]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[6]
+                                                                      r  new_weight_OBUF[7]_inst_i_4/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_O[3])
+                                                      0.092     0.630 r  new_weight_OBUF[7]_inst_i_4/O[3]
+                         net (fo=5, unplaced)         0.265     0.894    updated_sum[7]
+                                                                      r  new_weight_OBUF[7]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.109     1.003 r  new_weight_OBUF[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.340    new_weight_OBUF[7]
+                                                                      r  new_weight_OBUF[7]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.492 r  new_weight_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     2.492    new_weight[7]
+                                                                      r  new_weight[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight[0]
+                            (input port)
+  Destination:            new_weight[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.558ns  (logic 1.572ns (61.437%)  route 0.987ns (38.563%))
+  Logic Levels:           5  (CARRY4=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[0]
+                                                                      r  old_weight_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[0]
+                                                                      r  new_weight_OBUF[3]_inst_i_6/I0
+                         LUT2 (Prop_lut2_I0_O)        0.045     0.583 r  new_weight_OBUF[3]_inst_i_6/O
+                         net (fo=1, unplaced)         0.000     0.583    new_weight_OBUF[3]_inst_i_6_n_0
+                                                                      r  new_weight_OBUF[3]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.653 r  new_weight_OBUF[3]_inst_i_2/O[0]
+                         net (fo=1, unplaced)         0.312     0.965    updated_sum[0]
+                                                                      r  new_weight_OBUF[0]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.105     1.070 r  new_weight_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.407    new_weight_OBUF[0]
+                                                                      r  new_weight_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.558 r  new_weight_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.558    new_weight[0]
+                                                                      r  new_weight[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight[4]
+                            (input port)
+  Destination:            new_weight[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.558ns  (logic 1.572ns (61.437%)  route 0.987ns (38.563%))
+  Logic Levels:           5  (CARRY4=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight[4]
+                                                                      r  old_weight_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    old_weight_IBUF[4]
+                                                                      r  new_weight_OBUF[7]_inst_i_15/I0
+                         LUT2 (Prop_lut2_I0_O)        0.045     0.583 r  new_weight_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.000     0.583    new_weight_OBUF[7]_inst_i_15_n_0
+                                                                      r  new_weight_OBUF[7]_inst_i_4/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     0.653 r  new_weight_OBUF[7]_inst_i_4/O[0]
+                         net (fo=1, unplaced)         0.312     0.965    updated_sum[4]
+                                                                      r  new_weight_OBUF[4]_inst_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.105     1.070 r  new_weight_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.407    new_weight_OBUF[4]
+                                                                      r  new_weight_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.558 r  new_weight_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     2.558    new_weight[4]
+                                                                      r  new_weight[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[7]
+                            (input port)
+  Destination:            delta_weight[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.597ns  (logic 1.923ns (74.039%)  route 0.674ns (25.961%))
+  Logic Levels:           3  (DSP48E1=1 IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  pixel[7] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[7]
+                                                                      r  pixel_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  pixel_IBUF[7]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    pixel_IBUF[7]
+                                                                      r  raw_magnitude/B[7]
+                         DSP48E1 (Prop_dsp48e1_B[7]_P[18])
+                                                      0.571     1.109 r  raw_magnitude/P[18]
+                         net (fo=10, unplaced)        0.337     1.446    delta_weight_OBUF[0]
+                                                                      r  delta_weight_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.597 r  delta_weight_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.597    delta_weight[0]
+                                                                      r  delta_weight[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[7]
+                            (input port)
+  Destination:            raw_delta[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.597ns  (logic 1.923ns (74.039%)  route 0.674ns (25.961%))
+  Logic Levels:           3  (DSP48E1=1 IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  pixel[7] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[7]
+                                                                      r  pixel_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  pixel_IBUF[7]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    pixel_IBUF[7]
+                                                                      r  raw_delta__0/B[7]
+                         DSP48E1 (Prop_dsp48e1_B[7]_P[0])
+                                                      0.571     1.109 r  raw_delta__0/P[0]
+                         net (fo=1, unplaced)         0.337     1.446    raw_delta_OBUF[0]
+                                                                      r  raw_delta_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.597 r  raw_delta_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.597    raw_delta[0]
+                                                                      r  raw_delta[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[7]
+                            (input port)
+  Destination:            raw_delta[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.597ns  (logic 1.923ns (74.039%)  route 0.674ns (25.961%))
+  Logic Levels:           3  (DSP48E1=1 IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  pixel[7] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[7]
+                                                                      r  pixel_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  pixel_IBUF[7]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    pixel_IBUF[7]
+                                                                      r  raw_delta__0/B[7]
+                         DSP48E1 (Prop_dsp48e1_B[7]_P[10])
+                                                      0.571     1.109 r  raw_delta__0/P[10]
+                         net (fo=1, unplaced)         0.337     1.446    raw_delta_OBUF[10]
+                                                                      r  raw_delta_OBUF[10]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.597 r  raw_delta_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     2.597    raw_delta[10]
+                                                                      r  raw_delta[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pixel[7]
+                            (input port)
+  Destination:            raw_delta[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.597ns  (logic 1.923ns (74.039%)  route 0.674ns (25.961%))
+  Logic Levels:           3  (DSP48E1=1 IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  pixel[7] (IN)
+                         net (fo=0)                   0.000     0.000    pixel[7]
+                                                                      r  pixel_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  pixel_IBUF[7]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    pixel_IBUF[7]
+                                                                      r  raw_delta__0/B[7]
+                         DSP48E1 (Prop_dsp48e1_B[7]_P[11])
+                                                      0.571     1.109 r  raw_delta__0/P[11]
+                         net (fo=1, unplaced)         0.337     1.446    raw_delta_OBUF[11]
+                                                                      r  raw_delta_OBUF[11]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.597 r  raw_delta_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     2.597    raw_delta[11]
+                                                                      r  raw_delta[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

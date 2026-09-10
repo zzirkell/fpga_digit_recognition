@@ -1,0 +1,6 @@
+sample_index=0
+label=5
+prediction_before_update=0
+outputs=16 16 16 16 16 16 16 16 16 16
+corrections=-4096 -4096 -4096 -4096 -4096 4096 -4096 -4096 -4096 -4096
+weights_changed=1110

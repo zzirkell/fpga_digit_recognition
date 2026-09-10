@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_digit_classifier_train_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_digit_classifier_train" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="192,102 ps"></ZoomStartTime>
+      <ZoomEndTime time="192,113 ps"></ZoomEndTime>
+      <Cursor1Time time="15,746,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="303"></NameColumnWidth>
+      <ValueColumnWidth column_width="295"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/tb_digit_classifier_train/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/label" type="array">
+      <obj_property name="ElementShortName">label[3:0]</obj_property>
+      <obj_property name="ObjectShortName">label[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/prediction" type="array">
+      <obj_property name="ElementShortName">prediction[3:0]</obj_property>
+      <obj_property name="ObjectShortName">prediction[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/memory_address" type="array">
+      <obj_property name="ElementShortName">memory_address[9:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_address[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected0" type="array">
+      <obj_property name="ElementShortName">expected0[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected0[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected1" type="array">
+      <obj_property name="ElementShortName">expected1[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected1[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected2" type="array">
+      <obj_property name="ElementShortName">expected2[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected2[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected3" type="array">
+      <obj_property name="ElementShortName">expected3[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected3[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected4" type="array">
+      <obj_property name="ElementShortName">expected4[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected4[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected5" type="array">
+      <obj_property name="ElementShortName">expected5[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected5[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected6" type="array">
+      <obj_property name="ElementShortName">expected6[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected6[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected7" type="array">
+      <obj_property name="ElementShortName">expected7[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected7[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected8" type="array">
+      <obj_property name="ElementShortName">expected8[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected8[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/expected9" type="array">
+      <obj_property name="ElementShortName">expected9[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected9[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/index" type="array">
+      <obj_property name="ElementShortName">index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">index[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_digit_classifier_train/mismatch_count" type="array">
+      <obj_property name="ElementShortName">mismatch_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mismatch_count[31:0]</obj_property>
+   </wvobject>
+</wave_config>

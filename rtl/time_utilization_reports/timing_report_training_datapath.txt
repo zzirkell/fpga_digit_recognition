@@ -1,0 +1,1496 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri Sep 11 00:00:45 2026
+| Host         : zzirkell running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file C:/Users/mazek.ZZIRKELL/Downloads/fpga_final_project/rtl/time_utilization_reports/timing_report_training_datapath.txt
+| Design       : training_datapath
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   80          inf        0.000                      0                   80           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            80 Endpoints
+Min Delay            80 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[2]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update7/new_weight7_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight7_OBUF[2]
+                                                                      r  new_weight7_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight7_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight7[2]
+                                                                      r  new_weight7[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[4]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update7/new_weight7_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight7_OBUF[4]
+                                                                      r  new_weight7_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight7_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight7[4]
+                                                                      r  new_weight7[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[6]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update7/new_weight7_OBUF[6]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight7_OBUF[6]
+                                                                      r  new_weight7_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight7_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight7[6]
+                                                                      r  new_weight7[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[4]
+                            (input port)
+  Destination:            new_weight9[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation9[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[4]
+                                                                      r  activation9_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation9_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp9/activation9_IBUF[4]
+                                                                      r  bp9/gradient__0_carry__0_i_3__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp9/gradient__0_carry__0_i_3__8/O
+                         net (fo=2, unplaced)         0.865     2.786    bp9/gradient__0_carry__0_i_3__8_n_0
+                                                                      r  bp9/gradient__0_carry__0_i_7__8/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp9/gradient__0_carry__0_i_7__8/O
+                         net (fo=1, unplaced)         0.000     3.114    bp9/gradient__0_carry__0_i_7__8_n_0
+                                                                      r  bp9/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp9/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp9/gradient__0_carry__0_n_4
+                                                                      r  bp9/gradient__24_carry__0_i_12__4/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp9/gradient__24_carry__0_i_12__4/O
+                         net (fo=1, unplaced)         0.902     5.595    bp9/gradient__24_carry__0_i_12__4_n_0
+                                                                      r  bp9/gradient__24_carry__0_i_4__8/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp9/gradient__24_carry__0_i_4__8/O
+                         net (fo=1, unplaced)         0.000     5.719    bp9/gradient__24_carry__0_i_4__8_n_0
+                                                                      r  bp9/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp9/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp9/gradient__24_carry__0_n_5
+                                                                      r  bp9/correction_full__0_carry__1_i_3__8/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp9/correction_full__0_carry__1_i_3__8/O
+                         net (fo=1, unplaced)         0.639     7.743    bp9/correction_full__0_carry__1_i_3__8_n_0
+                                                                      r  bp9/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp9/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp9/correction_full__0_carry__1_n_4
+                                                                      r  bp9/correction_full__70_carry__1_i_10__5/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp9/correction_full__70_carry__1_i_10__5/O
+                         net (fo=3, unplaced)         0.920    10.235    bp9/correction_full__70_carry__1_i_10__5_n_0
+                                                                      r  bp9/correction_full__70_carry__1_i_7__8/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp9/correction_full__70_carry__1_i_7__8/O
+                         net (fo=1, unplaced)         0.000    10.359    bp9/correction_full__70_carry__1_i_7__8_n_0
+                                                                      r  bp9/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp9/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp9/correction_full__70_carry__1_n_0
+                                                                      r  bp9/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp9/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update9/A[15]
+                                                                      r  update9/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update9/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update9/raw_delta__0[24]
+                                                                      r  update9/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update9/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update9/raw_magnitude_n_87
+                                                                      f  update9/updated_sum_carry__0_i_8__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update9/updated_sum_carry__0_i_8__8/O
+                         net (fo=1, unplaced)         0.449    20.237    update9/updated_sum_carry__0_i_8__8_n_0
+                                                                      r  update9/updated_sum_carry__0_i_5__8/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update9/updated_sum_carry__0_i_5__8/O
+                         net (fo=1, unplaced)         0.000    20.361    update9/updated_sum_carry__0_i_5__8_n_0
+                                                                      r  update9/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update9/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update9/updated_sum_carry__0_n_0
+                                                                      r  update9/new_weight1_carry_i_1__8/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update9/new_weight1_carry_i_1__8/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update9/new_weight1_carry_i_1__8_n_3
+                                                                      r  update9/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update9/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update9/new_weight1__5_carry_n_0
+                                                                      r  update9/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update9/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update9/new_weight1__5_carry__0_n_2
+                                                                      r  update9/new_weight9_OBUF[2]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update9/new_weight9_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight9_OBUF[2]
+                                                                      r  new_weight9_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight9_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight9[2]
+                                                                      r  new_weight9[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[4]
+                            (input port)
+  Destination:            new_weight9[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation9[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[4]
+                                                                      r  activation9_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation9_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp9/activation9_IBUF[4]
+                                                                      r  bp9/gradient__0_carry__0_i_3__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp9/gradient__0_carry__0_i_3__8/O
+                         net (fo=2, unplaced)         0.865     2.786    bp9/gradient__0_carry__0_i_3__8_n_0
+                                                                      r  bp9/gradient__0_carry__0_i_7__8/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp9/gradient__0_carry__0_i_7__8/O
+                         net (fo=1, unplaced)         0.000     3.114    bp9/gradient__0_carry__0_i_7__8_n_0
+                                                                      r  bp9/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp9/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp9/gradient__0_carry__0_n_4
+                                                                      r  bp9/gradient__24_carry__0_i_12__4/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp9/gradient__24_carry__0_i_12__4/O
+                         net (fo=1, unplaced)         0.902     5.595    bp9/gradient__24_carry__0_i_12__4_n_0
+                                                                      r  bp9/gradient__24_carry__0_i_4__8/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp9/gradient__24_carry__0_i_4__8/O
+                         net (fo=1, unplaced)         0.000     5.719    bp9/gradient__24_carry__0_i_4__8_n_0
+                                                                      r  bp9/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp9/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp9/gradient__24_carry__0_n_5
+                                                                      r  bp9/correction_full__0_carry__1_i_3__8/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp9/correction_full__0_carry__1_i_3__8/O
+                         net (fo=1, unplaced)         0.639     7.743    bp9/correction_full__0_carry__1_i_3__8_n_0
+                                                                      r  bp9/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp9/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp9/correction_full__0_carry__1_n_4
+                                                                      r  bp9/correction_full__70_carry__1_i_10__5/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp9/correction_full__70_carry__1_i_10__5/O
+                         net (fo=3, unplaced)         0.920    10.235    bp9/correction_full__70_carry__1_i_10__5_n_0
+                                                                      r  bp9/correction_full__70_carry__1_i_7__8/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp9/correction_full__70_carry__1_i_7__8/O
+                         net (fo=1, unplaced)         0.000    10.359    bp9/correction_full__70_carry__1_i_7__8_n_0
+                                                                      r  bp9/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp9/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp9/correction_full__70_carry__1_n_0
+                                                                      r  bp9/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp9/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update9/A[15]
+                                                                      r  update9/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update9/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update9/raw_delta__0[24]
+                                                                      r  update9/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update9/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update9/raw_magnitude_n_87
+                                                                      f  update9/updated_sum_carry__0_i_8__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update9/updated_sum_carry__0_i_8__8/O
+                         net (fo=1, unplaced)         0.449    20.237    update9/updated_sum_carry__0_i_8__8_n_0
+                                                                      r  update9/updated_sum_carry__0_i_5__8/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update9/updated_sum_carry__0_i_5__8/O
+                         net (fo=1, unplaced)         0.000    20.361    update9/updated_sum_carry__0_i_5__8_n_0
+                                                                      r  update9/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update9/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update9/updated_sum_carry__0_n_0
+                                                                      r  update9/new_weight1_carry_i_1__8/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update9/new_weight1_carry_i_1__8/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update9/new_weight1_carry_i_1__8_n_3
+                                                                      r  update9/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update9/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update9/new_weight1__5_carry_n_0
+                                                                      r  update9/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update9/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update9/new_weight1__5_carry__0_n_2
+                                                                      r  update9/new_weight9_OBUF[4]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update9/new_weight9_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight9_OBUF[4]
+                                                                      r  new_weight9_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight9_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight9[4]
+                                                                      r  new_weight9[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation9[4]
+                            (input port)
+  Destination:            new_weight9[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.567ns  (logic 16.324ns (59.217%)  route 11.243ns (40.783%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation9[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation9[4]
+                                                                      r  activation9_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation9_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp9/activation9_IBUF[4]
+                                                                      r  bp9/gradient__0_carry__0_i_3__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp9/gradient__0_carry__0_i_3__8/O
+                         net (fo=2, unplaced)         0.865     2.786    bp9/gradient__0_carry__0_i_3__8_n_0
+                                                                      r  bp9/gradient__0_carry__0_i_7__8/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp9/gradient__0_carry__0_i_7__8/O
+                         net (fo=1, unplaced)         0.000     3.114    bp9/gradient__0_carry__0_i_7__8_n_0
+                                                                      r  bp9/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp9/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp9/gradient__0_carry__0_n_4
+                                                                      r  bp9/gradient__24_carry__0_i_12__4/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp9/gradient__24_carry__0_i_12__4/O
+                         net (fo=1, unplaced)         0.902     5.595    bp9/gradient__24_carry__0_i_12__4_n_0
+                                                                      r  bp9/gradient__24_carry__0_i_4__8/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp9/gradient__24_carry__0_i_4__8/O
+                         net (fo=1, unplaced)         0.000     5.719    bp9/gradient__24_carry__0_i_4__8_n_0
+                                                                      r  bp9/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp9/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp9/gradient__24_carry__0_n_5
+                                                                      r  bp9/correction_full__0_carry__1_i_3__8/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp9/correction_full__0_carry__1_i_3__8/O
+                         net (fo=1, unplaced)         0.639     7.743    bp9/correction_full__0_carry__1_i_3__8_n_0
+                                                                      r  bp9/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp9/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp9/correction_full__0_carry__1_n_4
+                                                                      r  bp9/correction_full__70_carry__1_i_10__5/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp9/correction_full__70_carry__1_i_10__5/O
+                         net (fo=3, unplaced)         0.920    10.235    bp9/correction_full__70_carry__1_i_10__5_n_0
+                                                                      r  bp9/correction_full__70_carry__1_i_7__8/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp9/correction_full__70_carry__1_i_7__8/O
+                         net (fo=1, unplaced)         0.000    10.359    bp9/correction_full__70_carry__1_i_7__8_n_0
+                                                                      r  bp9/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp9/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp9/correction_full__70_carry__1_n_0
+                                                                      r  bp9/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp9/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update9/A[15]
+                                                                      r  update9/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update9/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update9/raw_delta__0[24]
+                                                                      r  update9/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update9/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update9/raw_magnitude_n_87
+                                                                      f  update9/updated_sum_carry__0_i_8__8/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update9/updated_sum_carry__0_i_8__8/O
+                         net (fo=1, unplaced)         0.449    20.237    update9/updated_sum_carry__0_i_8__8_n_0
+                                                                      r  update9/updated_sum_carry__0_i_5__8/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update9/updated_sum_carry__0_i_5__8/O
+                         net (fo=1, unplaced)         0.000    20.361    update9/updated_sum_carry__0_i_5__8_n_0
+                                                                      r  update9/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update9/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update9/updated_sum_carry__0_n_0
+                                                                      r  update9/new_weight1_carry_i_1__8/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update9/new_weight1_carry_i_1__8/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update9/new_weight1_carry_i_1__8_n_3
+                                                                      r  update9/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update9/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update9/new_weight1__5_carry_n_0
+                                                                      r  update9/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update9/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update9/new_weight1__5_carry__0_n_2
+                                                                      r  update9/new_weight9_OBUF[6]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.358    24.133 r  update9/new_weight9_OBUF[6]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.932    new_weight9_OBUF[6]
+                                                                      r  new_weight9_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.567 r  new_weight9_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    27.567    new_weight9[6]
+                                                                      r  new_weight9[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.541ns  (logic 16.298ns (59.178%)  route 11.243ns (40.822%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[0]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.332    24.107 r  update7/new_weight7_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.906    new_weight7_OBUF[0]
+                                                                      r  new_weight7_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.541 r  new_weight7_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    27.541    new_weight7[0]
+                                                                      r  new_weight7[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.541ns  (logic 16.298ns (59.178%)  route 11.243ns (40.822%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[1]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.332    24.107 r  update7/new_weight7_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.906    new_weight7_OBUF[1]
+                                                                      r  new_weight7_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.541 r  new_weight7_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    27.541    new_weight7[1]
+                                                                      r  new_weight7[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.541ns  (logic 16.298ns (59.178%)  route 11.243ns (40.822%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[3]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.332    24.107 r  update7/new_weight7_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.906    new_weight7_OBUF[3]
+                                                                      r  new_weight7_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.541 r  new_weight7_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    27.541    new_weight7[3]
+                                                                      r  new_weight7[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 activation7[4]
+                            (input port)
+  Destination:            new_weight7[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.541ns  (logic 16.298ns (59.178%)  route 11.243ns (40.822%))
+  Logic Levels:           23  (CARRY4=9 DSP48E1=2 IBUF=1 LUT3=1 LUT4=4 LUT5=1 LUT6=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  activation7[4] (IN)
+                         net (fo=0)                   0.000     0.000    activation7[4]
+                                                                      r  activation7_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.972     0.972 r  activation7_IBUF[4]_inst/O
+                         net (fo=20, unplaced)        0.800     1.771    bp7/activation7_IBUF[4]
+                                                                      r  bp7/gradient__0_carry__0_i_3__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150     1.921 r  bp7/gradient__0_carry__0_i_3__6/O
+                         net (fo=2, unplaced)         0.865     2.786    bp7/gradient__0_carry__0_i_3__6_n_0
+                                                                      r  bp7/gradient__0_carry__0_i_7__6/I0
+                         LUT6 (Prop_lut6_I0_O)        0.328     3.114 r  bp7/gradient__0_carry__0_i_7__6/O
+                         net (fo=1, unplaced)         0.000     3.114    bp7/gradient__0_carry__0_i_7__6_n_0
+                                                                      r  bp7/gradient__0_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.757 r  bp7/gradient__0_carry__0/O[3]
+                         net (fo=2, unplaced)         0.629     4.386    bp7/gradient__0_carry__0_n_4
+                                                                      r  bp7/gradient__24_carry__0_i_12__3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.307     4.693 r  bp7/gradient__24_carry__0_i_12__3/O
+                         net (fo=1, unplaced)         0.902     5.595    bp7/gradient__24_carry__0_i_12__3_n_0
+                                                                      r  bp7/gradient__24_carry__0_i_4__6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.124     5.719 r  bp7/gradient__24_carry__0_i_4__6/O
+                         net (fo=1, unplaced)         0.000     5.719    bp7/gradient__24_carry__0_i_4__6_n_0
+                                                                      r  bp7/gradient__24_carry__0/S[1]
+                         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     6.297 r  bp7/gradient__24_carry__0/O[2]
+                         net (fo=16, unplaced)        0.506     6.803    bp7/gradient__24_carry__0_n_5
+                                                                      r  bp7/correction_full__0_carry__1_i_3__6/I5
+                         LUT6 (Prop_lut6_I5_O)        0.301     7.104 r  bp7/correction_full__0_carry__1_i_3__6/O
+                         net (fo=1, unplaced)         0.639     7.743    bp7/correction_full__0_carry__1_i_3__6_n_0
+                                                                      r  bp7/correction_full__0_carry__1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.629     8.372 r  bp7/correction_full__0_carry__1/O[3]
+                         net (fo=3, unplaced)         0.636     9.008    bp7/correction_full__0_carry__1_n_4
+                                                                      r  bp7/correction_full__70_carry__1_i_10__7/I1
+                         LUT4 (Prop_lut4_I1_O)        0.307     9.315 r  bp7/correction_full__70_carry__1_i_10__7/O
+                         net (fo=3, unplaced)         0.920    10.235    bp7/correction_full__70_carry__1_i_10__7_n_0
+                                                                      r  bp7/correction_full__70_carry__1_i_7__6/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124    10.359 r  bp7/correction_full__70_carry__1_i_7__6/O
+                         net (fo=1, unplaced)         0.000    10.359    bp7/correction_full__70_carry__1_i_7__6_n_0
+                                                                      r  bp7/correction_full__70_carry__1/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.892 r  bp7/correction_full__70_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    10.892    bp7/correction_full__70_carry__1_n_0
+                                                                      r  bp7/correction_full__70_carry__2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    11.124 r  bp7/correction_full__70_carry__2/O[0]
+                         net (fo=30, unplaced)        0.800    11.924    update7/A[15]
+                                                                      r  update7/raw_delta/A[29]
+                         DSP48E1 (Prop_dsp48e1_A[29]_P[24])
+                                                      4.016    15.940 r  update7/raw_delta/P[24]
+                         net (fo=10, unplaced)        0.800    16.740    update7/raw_delta__0[24]
+                                                                      r  update7/raw_magnitude/ALUMODE[1]
+                         DSP48E1 (Prop_dsp48e1_ALUMODE[1]_P[18])
+                                                      2.098    18.838 f  update7/raw_magnitude/P[18]
+                         net (fo=7, unplaced)         0.800    19.638    update7/raw_magnitude_n_87
+                                                                      f  update7/updated_sum_carry__0_i_8__6/I2
+                         LUT4 (Prop_lut4_I2_O)        0.150    19.788 r  update7/updated_sum_carry__0_i_8__6/O
+                         net (fo=1, unplaced)         0.449    20.237    update7/updated_sum_carry__0_i_8__6_n_0
+                                                                      r  update7/updated_sum_carry__0_i_5__6/I3
+                         LUT4 (Prop_lut4_I3_O)        0.124    20.361 r  update7/updated_sum_carry__0_i_5__6/O
+                         net (fo=1, unplaced)         0.000    20.361    update7/updated_sum_carry__0_i_5__6_n_0
+                                                                      r  update7/updated_sum_carry__0/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    20.874 r  update7/updated_sum_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    20.874    update7/updated_sum_carry__0_n_0
+                                                                      r  update7/new_weight1_carry_i_1__6/CI
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    21.155 r  update7/new_weight1_carry_i_1__6/CO[0]
+                         net (fo=18, unplaced)        1.040    22.195    update7/new_weight1_carry_i_1__6_n_3
+                                                                      r  update7/new_weight1__5_carry/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.743    22.938 r  update7/new_weight1__5_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    22.947    update7/new_weight1__5_carry_n_0
+                                                                      r  update7/new_weight1__5_carry__0/CI
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.126 r  update7/new_weight1__5_carry__0/CO[1]
+                         net (fo=8, unplaced)         0.649    23.775    update7/new_weight1__5_carry__0_n_2
+                                                                      r  update7/new_weight7_OBUF[5]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.332    24.107 r  update7/new_weight7_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    24.906    new_weight7_OBUF[5]
+                                                                      r  new_weight7_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.634    27.541 r  new_weight7_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    27.541    new_weight7[5]
+                                                                      r  new_weight7[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 old_weight0[0]
+                            (input port)
+  Destination:            new_weight0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight0[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight0[0]
+                                                                      r  old_weight0_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight0_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update0/old_weight0_IBUF[0]
+                                                                      r  update0/updated_sum_carry/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update0/updated_sum_carry/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update0/updated_sum[1]
+                                                                      r  update0/new_weight0_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update0/new_weight0_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight0_OBUF[1]
+                                                                      r  new_weight0_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight0[1]
+                                                                      r  new_weight0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight0[4]
+                            (input port)
+  Destination:            new_weight0[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight0[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight0[4]
+                                                                      r  old_weight0_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight0_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update0/old_weight0_IBUF[4]
+                                                                      r  update0/updated_sum_carry__0/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update0/updated_sum_carry__0/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update0/updated_sum[5]
+                                                                      r  update0/new_weight0_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update0/new_weight0_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight0_OBUF[5]
+                                                                      r  new_weight0_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight0_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight0[5]
+                                                                      r  new_weight0[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight1[0]
+                            (input port)
+  Destination:            new_weight1[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight1[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight1[0]
+                                                                      r  old_weight1_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight1_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update1/old_weight1_IBUF[0]
+                                                                      r  update1/updated_sum_carry/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update1/updated_sum_carry/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update1/updated_sum_carry_n_6
+                                                                      r  update1/new_weight1_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update1/new_weight1_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight1_OBUF[1]
+                                                                      r  new_weight1_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight1_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight1[1]
+                                                                      r  new_weight1[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight1[4]
+                            (input port)
+  Destination:            new_weight1[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight1[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight1[4]
+                                                                      r  old_weight1_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight1_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update1/old_weight1_IBUF[4]
+                                                                      r  update1/updated_sum_carry__0/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update1/updated_sum_carry__0/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update1/updated_sum_carry__0_n_6
+                                                                      r  update1/new_weight1_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update1/new_weight1_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight1_OBUF[5]
+                                                                      r  new_weight1_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight1_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight1[5]
+                                                                      r  new_weight1[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight2[0]
+                            (input port)
+  Destination:            new_weight2[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight2[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight2[0]
+                                                                      r  old_weight2_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight2_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update2/old_weight2_IBUF[0]
+                                                                      r  update2/updated_sum_carry/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update2/updated_sum_carry/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update2/updated_sum_carry_n_6
+                                                                      r  update2/new_weight2_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update2/new_weight2_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight2_OBUF[1]
+                                                                      r  new_weight2_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight2_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight2[1]
+                                                                      r  new_weight2[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight2[4]
+                            (input port)
+  Destination:            new_weight2[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight2[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight2[4]
+                                                                      r  old_weight2_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight2_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update2/old_weight2_IBUF[4]
+                                                                      r  update2/updated_sum_carry__0/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update2/updated_sum_carry__0/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update2/updated_sum_carry__0_n_6
+                                                                      r  update2/new_weight2_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update2/new_weight2_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight2_OBUF[5]
+                                                                      r  new_weight2_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight2_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight2[5]
+                                                                      r  new_weight2[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight3[0]
+                            (input port)
+  Destination:            new_weight3[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight3[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight3[0]
+                                                                      r  old_weight3_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight3_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update3/old_weight3_IBUF[0]
+                                                                      r  update3/updated_sum_carry/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update3/updated_sum_carry/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update3/updated_sum_carry_n_6
+                                                                      r  update3/new_weight3_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update3/new_weight3_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight3_OBUF[1]
+                                                                      r  new_weight3_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight3_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight3[1]
+                                                                      r  new_weight3[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight3[4]
+                            (input port)
+  Destination:            new_weight3[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight3[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight3[4]
+                                                                      r  old_weight3_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight3_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update3/old_weight3_IBUF[4]
+                                                                      r  update3/updated_sum_carry__0/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update3/updated_sum_carry__0/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update3/updated_sum_carry__0_n_6
+                                                                      r  update3/new_weight3_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update3/new_weight3_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight3_OBUF[5]
+                                                                      r  new_weight3_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight3_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight3[5]
+                                                                      r  new_weight3[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight4[0]
+                            (input port)
+  Destination:            new_weight4[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight4[0] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight4[0]
+                                                                      r  old_weight4_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight4_IBUF[0]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update4/old_weight4_IBUF[0]
+                                                                      r  update4/updated_sum_carry/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update4/updated_sum_carry/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update4/updated_sum_carry_n_6
+                                                                      r  update4/new_weight4_OBUF[1]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update4/new_weight4_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight4_OBUF[1]
+                                                                      r  new_weight4_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight4_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight4[1]
+                                                                      r  new_weight4[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 old_weight4[4]
+                            (input port)
+  Destination:            new_weight4[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.478ns  (logic 1.552ns (62.609%)  route 0.927ns (37.391%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  old_weight4[4] (IN)
+                         net (fo=0)                   0.000     0.000    old_weight4[4]
+                                                                      r  old_weight4_IBUF[4]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.200     0.200 r  old_weight4_IBUF[4]_inst/O
+                         net (fo=2, unplaced)         0.337     0.538    update4/old_weight4_IBUF[4]
+                                                                      r  update4/updated_sum_carry__0/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.092     0.630 r  update4/updated_sum_carry__0/O[1]
+                         net (fo=1, unplaced)         0.252     0.882    update4/updated_sum_carry__0_n_6
+                                                                      r  update4/new_weight4_OBUF[5]_inst_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.108     0.990 r  update4/new_weight4_OBUF[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.337     1.327    new_weight4_OBUF[5]
+                                                                      r  new_weight4_OBUF[5]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.151     2.478 r  new_weight4_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.478    new_weight4[5]
+                                                                      r  new_weight4[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
