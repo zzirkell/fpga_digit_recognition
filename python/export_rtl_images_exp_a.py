@@ -44,7 +44,14 @@ def plan(a):
 
 
 # Load Experiment-B weights
-weights_file = WEIGHTS_DIR / "integer_trained_weights_10000.npy"
+weights_file = (
+    WEIGHTS_DIR
+    / "int8_weights_from_float.npy"
+)
+
+weights = np.load(
+    weights_file
+).astype(np.int64)
 
 if not weights_file.exists():
     raise FileNotFoundError("integer_trained_weights_10000.npy was not found.")
@@ -60,7 +67,7 @@ test_images_float = test_dataset.data[:TEST_LIMIT].numpy().astype(np.float32) / 
 test_labels = test_dataset.targets[:TEST_LIMIT].numpy().astype(np.int64)
 test_images_float = test_images_float.reshape(TEST_LIMIT, NUM_INPUTS)
 
-#same integer pixel representation used by Experiment B
+#same integer pixel representation used by Experiment A
 test_images = np.round(test_images_float * 127.0).astype(np.int64)
 
 print("Test images:", test_images.shape)
@@ -76,7 +83,7 @@ predictions = np.argmax(activations, axis=1)
 accuracy = np.mean(predictions == test_labels)
 
 print()
-print("EXPERIMENT B PYTHON REFERENCE")
+print("EXPERIMENT A PYTHON REFERENCE")
 print(f"ACC_SHIFT = {ACC_SHIFT}")
 print(f"Accuracy  = {accuracy * 100:.2f}%")
 print(f"Correct   = {np.sum(predictions == test_labels)} / {TEST_LIMIT}")

@@ -25,7 +25,7 @@ ACC_SHIFTS = range(8, 19)
 INTEGER_TRAIN_LIMIT = 10_000
 
 #experiment B
-TRAIN_ACC_SHIFT = 12
+TRAIN_ACC_SHIFT = 11
 #scale weight update
 TRAIN_SHIFTS = range(15, 23)
 
