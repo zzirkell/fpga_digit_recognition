@@ -3,11 +3,6 @@ from pathlib import Path
 
 from torchvision.datasets import MNIST
 
-
-# =========================================================
-# Project paths
-# =========================================================
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 DATA_DIR = PROJECT_DIR / "data"
@@ -19,204 +14,90 @@ WEIGHTS_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# =========================================================
-# Configuration
-# =========================================================
-
+#configs
 SEED = 42
-
 NUM_INPUTS = 28 * 28
 NUM_OUTPUTS = 10
-
 TEST_LIMIT = 10_000
 
-# Accumulator scaling candidates.
+#accumulator shifts to be tested for exp A
 ACC_SHIFTS = range(8, 19)
-
-# We use a smaller training set first to determine
-# the integer training scale.
 INTEGER_TRAIN_LIMIT = 10_000
 
-# Candidate integer backpropagation scales.
+#experiment B
 TRAIN_ACC_SHIFT = 9
-
+#scale weight update
 TRAIN_SHIFTS = range(15, 23)
 
 def signed_shift_toward_zero(values, shift):
     """
-    Divide signed integers by 2**shift,
-    truncating symmetrically toward zero.
-
-    This avoids the negative bias of Python's
-    arithmetic right shift.
+    divide signed integers by 2**shift
     """
-
     values = np.asarray(
         values,
-        dtype=np.int64,
+        dtype=np.int64 #use 64 to avoid overflow
     )
-
-    magnitude = (
-        np.abs(values)
-        >> shift
-    )
-
-    return np.where(
+    magnitude = np.abs(values) >> shift
+    return np.where( #normal arithmetic right shift behaves strangely around zero
         values < 0,
         -magnitude,
-        magnitude,
+        magnitude
     )
-# =========================================================
-# PLAN activation
-# =========================================================
 
+#plan POSITIVE activation
 def plan_positive(a):
-    """
-    Positive side of the PLAN approximation.
-
-    Input:
-        non-negative integer
-
-    Output:
-        integer approximately 16...32
-    """
-
     a = np.asarray(a, dtype=np.int64)
-
     y = np.zeros_like(a)
 
     # a >= 160
     mask = a >= 160
     y[mask] = 32
-
     # 76 <= a < 160
     mask = (a >= 76) & (a < 160)
     y[mask] = (a[mask] >> 5) + 27
-
     # 32 <= a < 76
     mask = (a >= 32) & (a < 76)
     y[mask] = (a[mask] >> 3) + 20
-
     # 0 <= a < 32
     mask = (a >= 0) & (a < 32)
     y[mask] = (a[mask] >> 2) + 16
 
     return y
 
-
+#FPGA-style PLAN activation.
 def plan(a):
-    """
-    FPGA-style PLAN activation.
-
-    Input:
-        signed activation value
-        saturated to -256...255
-
-    Output:
-        0...32
-    """
-
     a = np.asarray(a, dtype=np.int64)
-
-    a = np.clip(
-        a,
-        -256,
-        255,
-    )
-
+    a = np.clip( a, -256, 255)
     abs_a = np.abs(a)
-
     positive = plan_positive(abs_a)
-
-    # sigmoid(-x) = 1 - sigmoid(x)
-    #
-    # Because our hardware sigmoid output is scaled
-    # from 0...1 to 0...32:
-    #
-    # PLAN(-x) = 32 - PLAN(x)
+    #sigmoid(-x) = 1 - sigmoid(x)
+    #PLAN(-x) = 32 - PLAN(x)
 
     y = np.where(
         a >= 0,
         positive,
         32 - positive,
     )
-
     return y
 
 
-# =========================================================
-# Load MNIST
-# =========================================================
-
+#mnist load
 print("Loading MNIST...")
+train_dataset = MNIST(root=DATA_DIR, train=True, download=True)
+test_dataset = MNIST(root=DATA_DIR, train=False, download=True)
 
-train_dataset = MNIST(
-    root=DATA_DIR,
-    train=True,
-    download=True,
-)
+#im->numpy normalize to 0.0...1.0
+train_images_float = train_dataset.data[:INTEGER_TRAIN_LIMIT].numpy().astype(np.float32) / 255.0
+train_labels = train_dataset.targets[:INTEGER_TRAIN_LIMIT].numpy()
 
-test_dataset = MNIST(
-    root=DATA_DIR,
-    train=False,
-    download=True,
-)
+test_images_float = test_dataset.data[:TEST_LIMIT].numpy().astype(np.float32) / 255.0
+test_labels = test_dataset.targets[:TEST_LIMIT].numpy()
 
+#28x28 -> 784
+train_images_float = train_images_float.reshape(-1, NUM_INPUTS)
+test_images_float = test_images_float.reshape(-1, NUM_INPUTS)
 
-# ---------------------------------------------------------
-# Convert images to NumPy
-# ---------------------------------------------------------
-
-train_images_float = (
-    train_dataset.data[:INTEGER_TRAIN_LIMIT]
-    .numpy()
-    .astype(np.float32)
-    / 255.0
-)
-
-train_labels = (
-    train_dataset.targets[:INTEGER_TRAIN_LIMIT]
-    .numpy()
-)
-
-test_images_float = (
-    test_dataset.data[:TEST_LIMIT]
-    .numpy()
-    .astype(np.float32)
-    / 255.0
-)
-
-test_labels = (
-    test_dataset.targets[:TEST_LIMIT]
-    .numpy()
-)
-
-
-# Flatten 28x28 -> 784
-
-train_images_float = train_images_float.reshape(
-    -1,
-    NUM_INPUTS,
-)
-
-test_images_float = test_images_float.reshape(
-    -1,
-    NUM_INPUTS,
-)
-
-
-# =========================================================
-# Quantize pixels
-# =========================================================
-
-# MNIST:
-#
-# float 0.0 ... 1.0
-#
-# becomes:
-#
-# integer 0 ... 127
-
+#1)quantize pixels 0/1->0/127
 train_images = np.round(
     train_images_float * 127.0
 ).astype(np.int64)
@@ -225,151 +106,65 @@ test_images = np.round(
     test_images_float * 127.0
 ).astype(np.int64)
 
-
-print(
-    "Training data:",
-    train_images.shape,
-)
-
-print(
-    "Testing data:",
-    test_images.shape,
-)
-
-print(
-    "Integer pixel range:",
-    train_images.min(),
-    "...",
-    train_images.max(),
-)
+print("Training data:", train_images.shape)
+print("Testing data:", test_images.shape)
+print("Integer pixel range:", train_images.min(), "...", train_images.max())
 
 
-# =========================================================
-# Load floating-point trained weights
-# =========================================================
-
+#load float weights from previous training
 float_weights_file = (
     WEIGHTS_DIR
     / "float_weights.npy"
 )
-
 if not float_weights_file.exists():
     raise FileNotFoundError(
         "float_weights.npy was not found. "
         "Run float_reference.py first."
     )
-
 float_weights = np.load(
     float_weights_file
 )
-
-
-print()
 print("Loaded floating-point weights:")
 print(float_weights.shape)
 
+#stats print
 print()
 print("Floating-point weight statistics:")
+print(f"min = {float_weights.min():.6f}")
+print(f"max = {float_weights.max():.6f}")
 
-print(
-    f"min     = {float_weights.min():.6f}"
-)
+max_abs_weight = np.max(np.abs(float_weights))
+print(f"max abs = {max_abs_weight:.6f}")
 
-print(
-    f"max     = {float_weights.max():.6f}"
-)
+#2)quantize trained weights to signed 8-bit
+weight_scale = 127.0 / max_abs_weight #22
 
-max_abs_weight = np.max(
-    np.abs(float_weights)
-)
-
-print(
-    f"max abs = {max_abs_weight:.6f}"
-)
-
-
-# =========================================================
-# Quantize trained weights to signed 8-bit
-# =========================================================
-
-weight_scale = (
-    127.0
-    / max_abs_weight
-)
-
-int_weights_from_float = np.round(
-    float_weights * weight_scale
-).astype(np.int64)
-
+int_weights_from_float = np.round(float_weights * weight_scale).astype(np.int64)
 int_weights_from_float = np.clip(
     int_weights_from_float,
     -127,
     127,
 )
 
-
-print()
+print() #-127...105
 print("8-bit weight quantization:")
+print(f"scale = {weight_scale:.6f}")
+print(f"integer min = {int_weights_from_float.min()}")
+print(f"integer max = {int_weights_from_float.max()}")
 
-print(
-    f"scale       = {weight_scale:.6f}"
-)
-
-print(
-    f"integer min = {int_weights_from_float.min()}"
-)
-
-print(
-    f"integer max = {int_weights_from_float.max()}"
-)
-
-
-# =========================================================
-# Raw integer weighted sums
-# =========================================================
-
-# test_images:
-#     10000 x 784
-#
-# weights:
-#     10 x 784
-#
-# accumulator:
-#     10000 x 10
-
+#3) integer weighted sums !!!
 accumulators = (
     test_images
     @ int_weights_from_float.T
 )
-
-
 print()
 print("Raw accumulator statistics:")
+print(f"minimum = {accumulators.min()}")
+print(f"maximum = {accumulators.max()}")
 
-print(
-    f"minimum = {accumulators.min()}"
-)
-
-print(
-    f"maximum = {accumulators.max()}"
-)
-
-
-# =========================================================
-# Accuracy before PLAN
-# =========================================================
-
-raw_predictions = np.argmax(
-    accumulators,
-    axis=1,
-)
-
-raw_accuracy = np.mean(
-    raw_predictions
-    == test_labels
-)
-
-
+#accuracy before PLAN
+raw_predictions = np.argmax(accumulators, axis=1)
+raw_accuracy = np.mean(raw_predictions == test_labels)
 print()
 print(
     "Quantized integer accuracy "
@@ -377,94 +172,50 @@ print(
     f"{raw_accuracy * 100:.2f}%"
 )
 
-
-# =========================================================
 # Find ACC_SHIFT
-# =========================================================
-
 print()
-print("============================================")
 print("ACC_SHIFT sweep")
-print("============================================")
-
-
 acc_results = []
-
 best_acc_accuracy = -1.0
 best_acc_shift = None
 
 
 for shift in ACC_SHIFTS:
-
     scaled = (
         accumulators
         >> shift
     )
 
-
-    # Amount of clipping before saturation.
-
+    #overflows
     below_range = np.mean(
         scaled < -256
     )
-
     above_range = np.mean(
         scaled > 255
     )
+    saturation_rate = below_range + above_range
 
-    saturation_rate = (
-        below_range
-        + above_range
-    )
-
-
-    # Saturate to PLAN input range.
-
+    #saturate to PLAN input range
     plan_input = np.clip(
         scaled,
         -256,
         255,
     )
 
-
-    # PLAN activation.
-
-    outputs = plan(
-        plan_input
-    )
+    #PLAN activation.
+    outputs = plan(plan_input)
+    predictions = np.argmax(outputs, axis=1)
+    accuracy = np.mean(predictions == test_labels)
 
 
-    predictions = np.argmax(
-        outputs,
-        axis=1,
-    )
-
-
-    accuracy = np.mean(
-        predictions
-        == test_labels
-    )
-
-
-    # Check how often several classes have
-    # exactly the same maximum PLAN output.
-
+    #ties (same output for both predictions)
     maximum = np.max(
         outputs,
         axis=1,
         keepdims=True,
     )
-
-    tie_count = np.sum(
-        outputs == maximum,
-        axis=1,
-    )
-
-    tie_rate = np.mean(
-        tie_count > 1
-    )
-
-
+    tie_count = np.sum(outputs == maximum, axis=1)
+    tie_rate = np.mean(tie_count > 1)
     print(
         f"shift={shift:2d} | "
         f"accuracy={accuracy * 100:6.2f}% | "
@@ -472,21 +223,10 @@ for shift in ACC_SHIFTS:
         f"ties={tie_rate * 100:6.2f}%"
     )
 
-
-    acc_results.append(
-        (
-            shift,
-            accuracy,
-            saturation_rate,
-            tie_rate,
-        )
-    )
-
-
+    acc_results.append((shift, accuracy, saturation_rate, tie_rate))
     if accuracy > best_acc_accuracy:
-
         best_acc_accuracy = accuracy
-        best_acc_shift = shift
+        best_acc_shift = shift #10
 
 
 # =========================================================
@@ -494,30 +234,11 @@ for shift in ACC_SHIFTS:
 # =========================================================
 
 print()
-print("============================================")
 print("Best fixed-point forward configuration")
-print("============================================")
-
-print(
-    f"ACC_SHIFT = {best_acc_shift}"
-)
-
-print(
-    f"Accuracy  = {best_acc_accuracy * 100:.2f}%"
-)
-
-
-# =========================================================
-# Save fixed-forward results
-# =========================================================
-
-np.save(
-    WEIGHTS_DIR
-    / "int8_weights_from_float.npy",
-    int_weights_from_float,
-)
-
-
+print(f"ACC_SHIFT = {best_acc_shift}")
+print(f"Accuracy  = {best_acc_accuracy * 100:.2f}%")
+#results save
+np.save(WEIGHTS_DIR  / "int8_weights_from_float.npy", int_weights_from_float)
 np.savetxt(
     RESULTS_DIR
     / "fixed_forward_shift_sweep.csv",
@@ -533,118 +254,78 @@ np.savetxt(
 )
 
 
-# =========================================================
-# FPGA-style integer forward function
-# =========================================================
-
+#exp B
+#direct integer training
 def integer_forward(
     weights,
     image,
     acc_shift,
 ):
     """
-    Forward propagation matching the intended RTL.
-
-    weights:
-        10 x 784 signed integer weights
-
-    image:
-        784 integer pixels
-
     returns:
         prediction
         10 PLAN outputs
     """
-
     accumulator = (
         weights
         @ image
     )
-
     plan_input = (
         accumulator
         >> acc_shift
     )
-
     plan_input = np.clip(
         plan_input,
         -256,
         255,
     )
-
     outputs = plan(
         plan_input
     )
-
     prediction = int(
         np.argmax(outputs)
     )
-
     return prediction, outputs
 
 
-# =========================================================
-# Vectorized integer evaluation
-# =========================================================
-
+#integer forward evaluation for many images
 def evaluate_integer(
     weights,
     images,
     labels,
     acc_shift,
 ):
-
     accumulators = (
         images
         @ weights.T
     )
-
     plan_input = (
         accumulators
         >> acc_shift
     )
-
     plan_input = np.clip(
         plan_input,
         -256,
         255,
     )
-
     outputs = plan(
         plan_input
     )
-
     predictions = np.argmax(
         outputs,
         axis=1,
     )
-
     return np.mean(
         predictions
         == labels
     )
 
-
-# =========================================================
-# Integer FPGA-style training
-# =========================================================
-
 print()
-print("============================================")
 print("Integer training TRAIN_SHIFT sweep")
-print("============================================")
+rng = np.random.default_rng(SEED)
 
 
-rng = np.random.default_rng(
-    SEED
-)
-
-
-# The paper says weights are initialized randomly.
-#
-# We use small signed integer values so the initial
-# weighted sums do not immediately saturate.
-
+#the paper says weights are initialized randomly. But we want to avoid immediate saturation
 initial_float_weights = rng.uniform(
     low=-0.05,
     high=0.05,
@@ -653,70 +334,40 @@ initial_float_weights = rng.uniform(
         NUM_INPUTS,
     ),
 )
-
 initial_weights = np.round(
     initial_float_weights * 128.0
 ).astype(np.int64)
+initial_weights = np.clip(initial_weights, -128, 127)
 
-initial_weights = np.clip(
-    initial_weights,
-    -128,
-    127,
-)
-
-print(
+print( #-6...6
     "Initial integer weight range:",
     initial_weights.min(),
     "...",
-    initial_weights.max(),
+    initial_weights.max()
 )
 
 
 train_results = []
-
 best_train_accuracy = -1.0
 best_train_shift = None
 best_train_weights = None
 
-
 for train_shift in TRAIN_SHIFTS:
-
     print()
-    print(
-        f"Training with TRAIN_SHIFT="
-        f"{train_shift}"
-    )
-
-
-    # Every experiment starts from exactly
-    # the same initial weights.
-
+    print( f"Training with TRAIN_SHIFT= {train_shift}")
     weights = (
         initial_weights.copy()
     )
 
-
-    # -----------------------------------------------------
-    # Online training
-    # -----------------------------------------------------
-
-    for sample_index in range(
-        INTEGER_TRAIN_LIMIT
-    ):
-
+    #online training
+    for sample_index in range(INTEGER_TRAIN_LIMIT):
         image = (
             train_images[sample_index]
         )
-
         label = (
             train_labels[sample_index]
         )
-
-
-        # ---------------------------------------------
-        # Forward propagation
-        # ---------------------------------------------
-
+        #forward prop
         prediction, outputs = (
             integer_forward(
                 weights,
@@ -725,119 +376,56 @@ for train_shift in TRAIN_SHIFTS:
             )
         )
 
-
-        # ---------------------------------------------
-        # Target
-        #
         # correct neuron   = 32
         # incorrect neuron = 0
-        # ---------------------------------------------
-
         target = np.zeros(
             NUM_OUTPUTS,
             dtype=np.int64,
         )
-
         target[label] = 32
+        #error
+        error = target - outputs
 
-
-        # ---------------------------------------------
-        # Error
-        #
-        # error_i = target_i - y_i
-        # ---------------------------------------------
-
-        error = (
-            target
-            - outputs
-        )
-
-
-        # ---------------------------------------------
-        # Sigmoid gradient
-        #
-        # y_real = Y / 32
-        #
-        # therefore the numerator of
-        #
-        # y(1-y)
-        #
-        # is:
-        #
-        # Y * (32-Y)
-        # ---------------------------------------------
-
+        #sigmoid gradient
         gradient = (
-            outputs
-            * (32 - outputs)
+            outputs * (32 - outputs)
         )
-
-
-        # ---------------------------------------------
         # Neuron correction
-        # ---------------------------------------------
-
         correction = (
             error
             * gradient
         )
-
-
-                # ---------------------------------------------
-        # Weight update
-        #
-        # delta_w =
-        #
-        # pixel
-        # *
-        # error
-        # *
-        # sigmoid_gradient
-        # ---------------------------------------------
-
+        #weight update
         delta_weights = np.outer(
             correction,
-            image,
+            image
         )
-
-        # Fixed-point / learning-rate scaling.
-        #
-        # Use symmetric truncation toward zero
-        # instead of Python's arithmetic right shift.
-
+        #fixed-point / learning-rate scaling
+        #use symmetric truncation toward zero instead of Python's arithmetic right shift.
         delta_weights = signed_shift_toward_zero(
             delta_weights,
-            train_shift,
+            train_shift
+        )
+        weights += delta_weights
+        weights = np.clip(
+            weights,
+            -128,
+            127
         )
 
-
-        weights += (
-            delta_weights
-        )
-
-    # -----------------------------------------------------
-    # Evaluate this training configuration
-    # -----------------------------------------------------
-
+    #evaluate this training configuration
     accuracy = evaluate_integer(
         weights,
         test_images,
         test_labels,
         TRAIN_ACC_SHIFT,
     )
-
-
     saturated_weights = np.mean(
-        (weights == -128)
-        |
-        (weights == 127)
+        (weights == -128) | (weights == 127)
     )
-
-
     zero_weights = np.mean(
         weights == 0
     )
-
     approx_learning_rate = 2.0 ** (
         15 - train_shift
     )
@@ -856,49 +444,25 @@ for train_shift in TRAIN_SHIFTS:
             train_shift,
             accuracy,
             saturated_weights,
-            zero_weights,
+            zero_weights
         )
     )
-
-
     if accuracy > best_train_accuracy:
-
         best_train_accuracy = (
             accuracy
         )
-
         best_train_shift = (
             train_shift
         )
-
         best_train_weights = (
             weights.copy()
         )
-
-
-# =========================================================
-# Final integer-training result
-# =========================================================
-
+#final evaluation of best integer training configuration
 print()
-print("============================================")
 print("Best integer-training configuration")
-print("============================================")
-
-print(
-    f"TRAIN_SHIFT = {best_train_shift}"
-)
-
-print(
-    f"Accuracy    = "
-    f"{best_train_accuracy * 100:.2f}%"
-)
-
-
-# =========================================================
-# Save integer training results
-# =========================================================
-
+print(f"TRAIN_SHIFT = {best_train_shift}")
+print(f"Accuracy    = {best_train_accuracy * 100:.2f}%")
+# save results
 np.savetxt(
     RESULTS_DIR
     / "integer_training_shift_sweep.csv",
@@ -912,8 +476,6 @@ np.savetxt(
     ),
     comments="",
 )
-
-
 np.save(
     WEIGHTS_DIR
     / "integer_trained_weights_10000.npy",
@@ -921,61 +483,47 @@ np.save(
 )
 
 
-# =========================================================
-# Save final fixed-point parameters
-# =========================================================
-
+#final fix-point parameters
 with open(
     RESULTS_DIR
     / "fixed_parameters.txt",
     "w",
 ) as f:
-
     f.write(
         f"ACC_SHIFT={best_acc_shift}\n"
     )
-
     f.write(
         f"TRAIN_SHIFT={best_train_shift}\n"
     )
-
     f.write(
         f"WEIGHT_SCALE={weight_scale}\n"
     )
-
     f.write(
         f"FIXED_FORWARD_ACCURACY="
         f"{best_acc_accuracy}\n"
     )
-
     f.write(
         f"INTEGER_TRAINING_ACCURACY="
         f"{best_train_accuracy}\n"
     )
-
-
 print()
 print("Saved:")
 print(
     WEIGHTS_DIR
     / "int8_weights_from_float.npy"
 )
-
 print(
     WEIGHTS_DIR
     / "integer_trained_weights_10000.npy"
 )
-
 print(
     RESULTS_DIR
     / "fixed_forward_shift_sweep.csv"
 )
-
 print(
     RESULTS_DIR
     / "integer_training_shift_sweep.csv"
 )
-
 print(
     RESULTS_DIR
     / "fixed_parameters.txt"

@@ -3,366 +3,220 @@ from pathlib import Path
 
 from torchvision.datasets import MNIST
 
-
-# ---------------------------------------------------------
-# Project paths
-# ---------------------------------------------------------
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
+DATA_DIR = PROJECT_DIR / "data"
 WEIGHTS_DIR = PROJECT_DIR / "weights"
 RESULTS_DIR = PROJECT_DIR / "results"
-DATA_DIR = PROJECT_DIR / "data"
 
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+WEIGHTS_DIR.mkdir(parents=True, exist_ok=True)
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-# ---------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------
-
-NUM_INPUTS = 784
+#configs
+SEED = 42
+NUM_INPUTS = 28 * 28
 NUM_OUTPUTS = 10
-
+TRAIN_LIMIT = 55_000
 TEST_LIMIT = 10_000
+LEARNING_RATE = 1.0 #how much updated weight to summ
 
-# We will test several accumulator scaling choices.
-ACC_SHIFTS = range(8, 19)
+CHECKPOINTS = [
+    1_000,
+    5_000,
+    10_000,
+    20_000,
+    40_000,
+    55_000,
+]
 
+#standard sigmoid activation.
+def sigmoid(x):
+    #prevent extremely large values (exp overflow).
+    x = np.clip(x, -50.0, 50.0)
+    return 1.0 / (1.0 + np.exp(-x))
 
-# ---------------------------------------------------------
-# PLAN activation
-# ---------------------------------------------------------
+#target vector
+def one_hot(label): #ex:6 -> [0,0,0,0,0,0,1,0,0,0]
+    target = np.zeros(
+        NUM_OUTPUTS,
+        dtype=np.float32
+    )
+    target[label] = 1.0
+    return target
 
-def plan_positive(a):
+#predict one image
+def predict(weights, image):
     """
-    PLAN approximation for non-negative integer input.
-
-    Paper:
-        y = 32                    , a >= 160
-        y = a/32 + 27            , 76 <= a < 160
-        y = a/8  + 20            , 32 <= a < 76
-        y = a/4  + 16            , 0 <= a < 32
-
-    Division by powers of two is implemented as shifts.
+    weights:[10, 784]
+    image:[784]
+    prediction = digit 0...9
+    outputs: [10]
     """
-
-    a = np.asarray(a, dtype=np.int64)
-
-    y = np.zeros_like(a)
-
-    mask = a >= 160
-    y[mask] = 32
-
-    mask = (a >= 76) & (a < 160)
-    y[mask] = (a[mask] >> 5) + 27
-
-    mask = (a >= 32) & (a < 76)
-    y[mask] = (a[mask] >> 3) + 20
-
-    mask = (a >= 0) & (a < 32)
-    y[mask] = (a[mask] >> 2) + 16
-
-    return y
-
-
-def plan(a):
-    """
-    Integer PLAN.
-
-    Input:
-        signed 9-bit conceptual range:
-        -256 ... +255
-
-    Output:
-        0 ... 32
-    """
-
-    a = np.asarray(a, dtype=np.int64)
-
-    # Saturate to the 9-bit activation-input range.
-    a = np.clip(a, -256, 255)
-
-    abs_a = np.abs(a)
-
-    positive_result = plan_positive(abs_a)
-
-    # sigmoid(-x) = 1 - sigmoid(x)
-    #
-    # Our sigmoid output is scaled from [0,1]
-    # to [0,32], therefore:
-    #
-    # PLAN(-x) = 32 - PLAN(x)
-    y = np.where(
-        a >= 0,
-        positive_result,
-        32 - positive_result,
+    #matrix multiplication
+    weighted_sum = (
+        weights @ image
     )
 
-    return y
+    #apply sigmoid to each of 10
+    outputs = sigmoid(weighted_sum)
+    #find which neuron has the largest output
+    prediction = int(
+        np.argmax(outputs)
+    )
+    return prediction, outputs
+
+#evaluate many images (accuracy)
+def evaluate(weights, images, labels):
+    weighted_sum = (
+        weights @ images.T #dont forget to transpose
+    )
+    outputs = sigmoid(weighted_sum)
+
+    #for every image, find which neuron has the largest output
+    predictions = np.argmax(
+        outputs,
+        axis=0
+    )
+
+    #taking the mean gives accuracy.
+    accuracy = np.mean(predictions == labels)
+    return accuracy
 
 
-# ---------------------------------------------------------
-# Load floating-point trained weights
-# ---------------------------------------------------------
-
-weights_file = WEIGHTS_DIR / "float_weights.npy"
-
-float_weights = np.load(weights_file)
-
-print("Loaded floating-point weights:")
-print(float_weights.shape)
-
-print()
-print("Weight statistics:")
-print(f"min      = {float_weights.min():.6f}")
-print(f"max      = {float_weights.max():.6f}")
-print(f"max abs  = {np.max(np.abs(float_weights)):.6f}")
-
-
-# ---------------------------------------------------------
-# Quantize weights to signed 8-bit
-# ---------------------------------------------------------
-
-max_abs_weight = np.max(np.abs(float_weights))
-
-weight_scale = 127.0 / max_abs_weight
-
-int_weights = np.round(
-    float_weights * weight_scale
-).astype(np.int64)
-
-int_weights = np.clip(
-    int_weights,
-    -127,
-    127,
+#2 mnist datasets: training and testing
+print("Loading MNIST...")
+train_dataset = MNIST(
+    root=DATA_DIR,
+    train=True,
+    download=True
 )
-
-print()
-print("8-bit weight quantization:")
-print(f"scale       = {weight_scale:.6f}")
-print(f"integer min = {int_weights.min()}")
-print(f"integer max = {int_weights.max()}")
-
-
-# ---------------------------------------------------------
-# Load MNIST test images
-# ---------------------------------------------------------
-
 test_dataset = MNIST(
     root=DATA_DIR,
     train=False,
-    download=True,
+    download=True
 )
 
-test_images = (
-    test_dataset.data[:TEST_LIMIT]
-    .numpy()
-    .astype(np.float32)
-    / 255.0
-)
-
-test_labels = (
-    test_dataset.targets[:TEST_LIMIT]
-    .numpy()
-)
-
-test_images = test_images.reshape(
-    -1,
-    NUM_INPUTS,
-)
+#MNIST (grayscale intensity) ->  NumPy (/255)
+train_images = (train_dataset.data[:TRAIN_LIMIT].numpy().astype(np.float32) / 255.0)
+train_labels = (train_dataset.targets[:TRAIN_LIMIT].numpy())
+test_images = (test_dataset.data[:TEST_LIMIT].numpy().astype(np.float32) / 255.0)
+test_labels = (test_dataset.targets[:TEST_LIMIT].numpy())
 
 
-# ---------------------------------------------------------
-# Quantize pixels
-# ---------------------------------------------------------
+#flatten to vectors (55000, 784)
+train_images = train_images.reshape(-1,NUM_INPUTS)
+test_images = test_images.reshape(-1,NUM_INPUTS)
 
-# 0.0 ... 1.0
-#       ↓
-# 0 ... 127
-#
-# Keeping pixels in signed-8-bit positive range makes
-# the eventual Verilog multiplier straightforward.
+print("Training data:", train_images.shape)
+print("Testing data: ", test_images.shape)
 
-int_images = np.round(
-    test_images * 127.0
-).astype(np.int64)
+#init weights with random numbers between -0.05 and 0.05
+rng = np.random.default_rng(SEED)
+weights = rng.uniform(
+    low=-0.05,
+    high=0.05,
+    size=(
+        NUM_OUTPUTS,
+        NUM_INPUTS,
+    ),
+).astype(np.float32)
 
-
+#online training
 print()
-print("Pixel range:")
-print(
-    int_images.min(),
-    "...",
-    int_images.max(),
-)
-
-
-# ---------------------------------------------------------
-# Integer weighted sums
-# ---------------------------------------------------------
-
-# Shape:
-#
-# images:   10000 x 784
-# weights:     10 x 784
-#
-# result:   10000 x 10
-
-accumulators = (
-    int_images
-    @ int_weights.T
-)
-
-
+print("Starting online training...")
 print()
-print("Raw accumulator statistics:")
-print(f"minimum = {accumulators.min()}")
-print(f"maximum = {accumulators.max()}")
+accuracy_history = []
 
+for sample_index in range(TRAIN_LIMIT):
+    #get one training image
+    image = (train_images[sample_index])
+    label = (train_labels[sample_index])
 
-# ---------------------------------------------------------
-# Useful baseline:
-# prediction before PLAN
-# ---------------------------------------------------------
-
-raw_predictions = np.argmax(
-    accumulators,
-    axis=1,
-)
-
-raw_accuracy = np.mean(
-    raw_predictions == test_labels
-)
-
-print()
-print(
-    "Quantized integer accuracy "
-    f"before PLAN: {raw_accuracy * 100:.2f}%"
-)
-
-
-# ---------------------------------------------------------
-# Sweep accumulator shifts
-# ---------------------------------------------------------
-
-print()
-print("--------------------------------------------")
-print("ACC_SHIFT sweep")
-print("--------------------------------------------")
-
-best_accuracy = -1.0
-best_shift = None
-
-results = []
-
-for shift in ACC_SHIFTS:
-
-    scaled = accumulators >> shift
-
-    # Diagnostics before saturation.
-    below_range = np.mean(
-        scaled < -256
+    #forward pass (prediction) !!!base
+    weighted_sum = (
+        weights @ image
+    )
+    outputs = sigmoid(
+        weighted_sum
+    )
+    target = one_hot(
+        label
     )
 
-    above_range = np.mean(
-        scaled > 255
+    #backpropagation (weight update)
+    error = target - outputs
+
+    #gradient of sigmoid: y * (1-y) -> *error correction value for each neuron
+    neuron_change = (
+        error
+        * outputs
+        * (1.0 - outputs)
     )
 
-    plan_input = np.clip(
-        scaled,
-        -256,
-        255,
-    )
+    #change weights with outer product (10, 784)
+    weight_change = np.outer(neuron_change,  image)
 
-    outputs = plan(plan_input)
+    #no weight update in our example
+    weights += LEARNING_RATE * weight_change
 
-    predictions = np.argmax(
-        outputs,
-        axis=1,
-    )
-
-    accuracy = np.mean(
-        predictions == test_labels
-    )
-
-    # Count images where multiple classes share
-    # the maximum PLAN result.
-    max_values = np.max(
-        outputs,
-        axis=1,
-        keepdims=True,
-    )
-
-    ties = np.sum(
-        outputs == max_values,
-        axis=1,
-    )
-
-    tie_rate = np.mean(
-        ties > 1
-    )
-
-    saturation_rate = (
-        below_range + above_range
-    )
-
-    results.append(
-        (
-            shift,
-            accuracy,
-            saturation_rate,
-            tie_rate,
+    #evaluation section
+    trained_images = sample_index + 1
+    if trained_images in CHECKPOINTS:
+        accuracy = evaluate(
+            weights,
+            test_images,
+            test_labels
         )
-    )
+        accuracy_history.append((trained_images, accuracy))
+        print(
+            f"After {trained_images:5d} "
+            f"training images: "
+            f"test accuracy = "
+            f"{accuracy * 100:.2f}%"
+        )
 
-    print(
-        f"shift={shift:2d} | "
-        f"accuracy={accuracy * 100:6.2f}% | "
-        f"saturation={saturation_rate * 100:6.2f}% | "
-        f"ties={tie_rate * 100:6.2f}%"
-    )
-
-    if accuracy > best_accuracy:
-        best_accuracy = accuracy
-        best_shift = shift
+        #save weights to file for later
+        checkpoint_file = (WEIGHTS_DIR / f"float_weights_{trained_images}.npy")
+        np.save(checkpoint_file, weights)
 
 
-# ---------------------------------------------------------
-# Best result
-# ---------------------------------------------------------
-
+#final test
+print("now trained model")
+final_accuracy = evaluate(
+    weights,
+    test_images,
+    test_labels
+)
+print(f"Accuracy: {final_accuracy * 100:.2f}%")
+print("Example predictions:")
 print()
-print("--------------------------------------------")
-print("Best fixed-point forward configuration")
-print("--------------------------------------------")
 
-print(f"ACC_SHIFT = {best_shift}")
-print(
-    f"Accuracy  = {best_accuracy * 100:.2f}%"
-)
+for i in range(10):
+    prediction, outputs = predict(weights, test_images[i])
+    print(
+        f"Image {i:2d}: "
+        f"label={test_labels[i]} "
+        f"prediction={prediction}"
+    )
 
+#save weights to file for later
+weights_file = (WEIGHTS_DIR / "float_weights.npy")
+np.save(weights_file, weights)
+print("Saved weights to:")
+print(weights_file)
 
-# ---------------------------------------------------------
-# Save sweep results
-# ---------------------------------------------------------
-
-results_file = (
-    RESULTS_DIR
-    / "fixed_forward_shift_sweep.csv"
-)
-
+#accuracy history to file for later
+history_file = (RESULTS_DIR / "float_accuracy_history.csv")
 np.savetxt(
-    results_file,
-    np.array(results),
+    history_file,
+    np.array(accuracy_history),
     delimiter=",",
     header=(
-        "acc_shift,"
-        "accuracy,"
-        "saturation_rate,"
-        "tie_rate"
+        "training_images,"
+        "accuracy"
     ),
-    comments="",
+    comments=""
 )
-
-print()
-print("Saved results to:")
-print(results_file)
+print("Saved accuracy history to:")
+print(history_file)
